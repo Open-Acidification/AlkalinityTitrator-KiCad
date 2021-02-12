@@ -10,9 +10,9 @@ KiCad files for pcb design for Open Acidification Alkalinity Titrator unit.
 
 1. Clone this repo to your local computer.
 1. Open KiCad.
-1. Use the KiCad menu to open the `???` project file.
+1. Use the KiCad menu to open the `full_project.pro` project file.
     * _File -> Open Project_
-    * Navigate to your local repo location and select `???` project file.
+    * Navigate to your local repo location and select `full_project.pro` project file.
 1. View the PCB.
 
 ## Release
