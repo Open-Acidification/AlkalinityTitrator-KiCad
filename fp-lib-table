@@ -1,0 +1,3 @@
+(fp_lib_table
+  (lib (name Titrator_Footprints)(type KiCad)(uri ${KIPRJMOD}/Titrator_Footprints.pretty)(options "")(descr ""))
+)
