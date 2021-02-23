@@ -1071,8 +1071,8 @@ $Comp
 L Amplifier_Operational:LMC6062 U6
 U 3 1 605BB0C0
 P 5975 3775
-F 0 "U6" H 5933 3821 50  0000 L CNN
-F 1 "LMC662" H 5933 3730 50  0000 L CNN
+F 0 "U6" V 5800 3700 50  0000 L CNN
+F 1 "LMC662" V 5950 3625 50  0000 L CNN
 F 2 "Package_DIP:DIP-8_W7.62mm" H 5975 3775 50  0001 C CNN
 F 3 "https://www.ti.com/lit/ds/symlink/lmc662.pdf?ts=1612139527764&ref_url=https%253A%252F%252Fwww.google.com%252F" H 5975 3775 50  0001 C CNN
 	3    5975 3775
@@ -1156,4 +1156,49 @@ Wire Wire Line
 	6325 2575 6325 2775
 Wire Wire Line
 	4850 2475 5725 2475
+$Comp
+L Amplifier_Operational:LMC6062 U7
+U 2 1 6036177B
+P 4600 4000
+F 0 "U7" H 4600 4367 50  0000 C CNN
+F 1 "LMC662" H 4600 4276 50  0000 C CNN
+F 2 "Package_DIP:DIP-8_W7.62mm" H 4600 4000 50  0001 C CNN
+F 3 "https://www.ti.com/lit/ds/symlink/lmc662.pdf?ts=1612139527764&ref_url=https%253A%252F%252Fwww.google.com%252F" H 4600 4000 50  0001 C CNN
+	2    4600 4000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Amplifier_Operational:LMC6062 U7
+U 3 1 603641B9
+P 5950 3425
+F 0 "U7" V 5775 3350 50  0000 L CNN
+F 1 "LMC662" V 5925 3275 50  0000 L CNN
+F 2 "Package_DIP:DIP-8_W7.62mm" H 5950 3425 50  0001 C CNN
+F 3 "https://www.ti.com/lit/ds/symlink/lmc662.pdf?ts=1612139527764&ref_url=https%253A%252F%252Fwww.google.com%252F" H 5950 3425 50  0001 C CNN
+	3    5950 3425
+	0    1    1    0   
+$EndComp
+NoConn ~ 4300 3900
+NoConn ~ 4300 4100
+NoConn ~ 4900 4000
+Text Notes 4150 4300 0    50   ~ 0
+Second channel of LPF IC
+Wire Wire Line
+	5650 3325 5600 3325
+Wire Wire Line
+	5600 3325 5600 3675
+Connection ~ 5600 3675
+Wire Wire Line
+	6250 3325 6325 3325
+Wire Wire Line
+	6325 3325 6325 3675
+Connection ~ 6325 3675
+Wire Notes Line
+	4100 4325 5175 4325
+Wire Notes Line
+	5175 4325 5175 3575
+Wire Notes Line
+	5175 3575 4100 3575
+Wire Notes Line
+	4100 3575 4100 4325
 $EndSCHEMATC
