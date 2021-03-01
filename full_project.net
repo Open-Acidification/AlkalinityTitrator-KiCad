@@ -1,7 +1,7 @@
 (export (version D)
   (design
-    (source "C:\\Users\\noahg\\Desktop\\School Stuff\\Senior\\AlkalinityTitrator-KiCad-main\\AlkalinityTitrator-KiCad-main\\full_project.sch")
-    (date "2/28/2021 9:58:38 PM")
+    (source "C:\\Users\\noahg\\Desktop\\School Stuff\\Senior\\AlkalinityTitrator-KiCad\\full_project.sch")
+    (date "2/28/2021 10:44:20 PM")
     (tool "Eeschema (5.1.5)-3")
     (sheet (number 1) (name /) (tstamps /)
       (title_block
@@ -232,7 +232,7 @@
       (tstamp 6028BAE0))
     (comp (ref U8)
       (value L7805)
-      (footprint L7805:78XXS)
+      (footprint Titrator_Footprints:78XXS)
       (datasheet http://www.st.com/content/ccc/resource/technical/document/datasheet/41/4f/b3/b0/12/d4/47/88/CD00000444.pdf/files/CD00000444.pdf/jcr:content/translations/en.CD00000444.pdf)
       (libsource (lib Regulator_Linear) (part L7805) (description "Positive 1.5A 35V Linear Regulator, Fixed Output 5V, TO-220/TO-263/TO-252"))
       (sheetpath (names /) (tstamps /))
@@ -584,7 +584,7 @@
     (library (logical Device)
       (uri "C:\\Program Files\\KiCad\\share\\kicad\\library/Device.lib"))
     (library (logical LM4140CCM-1.0)
-      (uri "C:\\Users\\noahg\\Desktop\\School Stuff\\Senior\\AlkalinityTitrator-KiCad-main\\AlkalinityTitrator-KiCad-main/imported_symbols/LM4140CCM-1.0.lib"))
+      (uri "C:\\Users\\noahg\\Desktop\\School Stuff\\Senior\\AlkalinityTitrator-KiCad/imported_symbols/LM4140CCM-1.0.lib"))
     (library (logical Regulator_Linear)
       (uri "C:\\Program Files\\KiCad\\share\\kicad\\library/Regulator_Linear.lib"))
     (library (logical Transistor_BJT)
@@ -592,7 +592,7 @@
     (library (logical pspice)
       (uri "C:\\Program Files\\KiCad\\share\\kicad\\library/pspice.lib"))
     (library (logical titrator)
-      (uri "C:\\Users\\noahg\\Desktop\\School Stuff\\Senior\\AlkalinityTitrator-KiCad-main\\AlkalinityTitrator-KiCad-main/titrator.lib")))
+      (uri "C:\\Users\\noahg\\Desktop\\School Stuff\\Senior\\AlkalinityTitrator-KiCad/titrator.lib")))
   (nets
     (net (code 1) (name "Net-(C5-Pad2)")
       (node (ref D1) (pin 1))
