@@ -577,17 +577,6 @@ F 3 "~" H 6475 2025 50  0001 C CNN
 $EndComp
 Text Notes 7850 1900 0    50   ~ 0
 V2(pH) = V(pH) + 512mV
-$Comp
-L Device:R R5
-U 1 1 602999CE
-P 7325 2375
-F 0 "R5" H 7395 2421 50  0000 L CNN
-F 1 "160000" H 7395 2330 50  0000 L CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 7255 2375 50  0001 C CNN
-F 3 "~" H 7325 2375 50  0001 C CNN
-	1    7325 2375
-	0    -1   -1   0   
-$EndComp
 Wire Wire Line
 	8850 2275 8775 2275
 Wire Wire Line
@@ -613,7 +602,7 @@ L Device:R R4
 U 1 1 6028400B
 P 6875 2375
 F 0 "R4" H 6945 2421 50  0000 L CNN
-F 1 "160000" H 6945 2330 50  0000 L CNN
+F 1 "160k" H 6945 2330 50  0000 L CNN
 F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 6805 2375 50  0001 C CNN
 F 3 "~" H 6875 2375 50  0001 C CNN
 	1    6875 2375
@@ -803,12 +792,6 @@ Wire Wire Line
 	6625 2025 7100 2025
 Wire Wire Line
 	7025 2375 7100 2375
-Connection ~ 7100 2375
-Wire Wire Line
-	7100 2375 7175 2375
-Wire Wire Line
-	7475 2375 8175 2375
-Connection ~ 8175 2375
 Wire Notes Line
 	9175 1700 9175 3875
 Wire Notes Line
@@ -1397,4 +1380,50 @@ Text Label 2175 5925 2    50   ~ 0
 Arduino_GND
 Text Notes 3000 6900 0    50   ~ 0
 LCD Blacklight\nAdjustment
+$Comp
+L Device:R R5
+U 1 1 603E3A5D
+P 7375 2375
+F 0 "R5" H 7445 2421 50  0000 L CNN
+F 1 "80k" H 7445 2330 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 7305 2375 50  0001 C CNN
+F 3 "~" H 7375 2375 50  0001 C CNN
+	1    7375 2375
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R R6
+U 1 1 603E52A7
+P 7825 2375
+F 0 "R6" H 7895 2421 50  0000 L CNN
+F 1 "80k" H 7895 2330 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 7755 2375 50  0001 C CNN
+F 3 "~" H 7825 2375 50  0001 C CNN
+	1    7825 2375
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:C C8
+U 1 1 603E5A82
+P 7600 2525
+F 0 "C8" V 7852 2525 50  0000 C CNN
+F 1 "1uF" V 7761 2525 50  0000 C CNN
+F 2 "Capacitor_THT:C_Disc_D3.8mm_W2.6mm_P2.50mm" H 7638 2375 50  0001 C CNN
+F 3 "~" H 7600 2525 50  0001 C CNN
+	1    7600 2525
+	1    0    0    -1  
+$EndComp
+Text Label 7600 2675 0    50   ~ 0
+PSU_AGND
+Wire Wire Line
+	8175 2375 7975 2375
+Connection ~ 8175 2375
+Wire Wire Line
+	7675 2375 7600 2375
+Wire Wire Line
+	7600 2375 7525 2375
+Connection ~ 7600 2375
+Wire Wire Line
+	7225 2375 7100 2375
+Connection ~ 7100 2375
 $EndSCHEMATC
