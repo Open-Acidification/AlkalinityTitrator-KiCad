@@ -728,6 +728,11 @@
       (net 21 "Net-(J12-Pad1)"))
     (pad 1 thru_hole circle (at 0 0 90) (size 1.397 1.397) (drill 0.889) (layers *.Cu *.Mask)
       (net 18 "Net-(J6-Pad1)"))
+    (model "${KIPRJMOD}/imported_3d/BNC Connector.STEP"
+      (offset (xyz -7.5 -2 0))
+      (scale (xyz 1 1 1))
+      (rotate (xyz -90 0 0))
+    )
   )
 
   (module Capacitor_THT:C_Disc_D3.8mm_W2.6mm_P2.50mm (layer F.Cu) (tedit 5AE50EF0) (tstamp 6017C438)
@@ -1804,10 +1809,10 @@
       (net 6 GND))
     (pad 1 thru_hole roundrect (at 0 0 90) (size 1.74 1.74) (drill 1.09) (layers *.Cu *.Mask) (roundrect_rratio 0.143678)
       (net 3 +3V3))
-    (model ${KISYS3DMOD}/Connector_Molex.3dshapes/Molex_SL_171971-0008_1x08_P2.54mm_Vertical.wrl
-      (at (xyz 0 0 0))
+    (model ${KIPRJMOD}/imported_3d/705430112.stp
+      (offset (xyz 9 0 8))
       (scale (xyz 1 1 1))
-      (rotate (xyz 0 0 0))
+      (rotate (xyz 0 0 180))
     )
   )
 
@@ -1878,10 +1883,10 @@
     (pad 7 thru_hole circle (at 15.24 0 90) (size 1.74 1.74) (drill 1.09) (layers *.Cu *.Mask)
       (net 10 /CE1))
     (pad 8 thru_hole circle (at 17.78 0 90) (size 1.74 1.74) (drill 1.09) (layers *.Cu *.Mask))
-    (model ${KISYS3DMOD}/Connector_Molex.3dshapes/Molex_SL_171971-0008_1x08_P2.54mm_Vertical.wrl
-      (at (xyz 0 0 0))
+    (model ${KIPRJMOD}/imported_3d/705430112.stp
+      (offset (xyz 9 0 7))
       (scale (xyz 1 1 1))
-      (rotate (xyz 0 0 0))
+      (rotate (xyz 0 0 180))
     )
   )
 
@@ -2094,10 +2099,10 @@
       (net 3 +3V3))
     (pad 16 thru_hole oval (at 0 -38.1 180) (size 1.7 1.7) (drill 1) (layers *.Cu *.Mask)
       (net 6 GND))
-    (model ${KISYS3DMOD}/Connector_PinSocket_2.54mm.3dshapes/PinSocket_1x16_P2.54mm_Horizontal.wrl
-      (at (xyz 0 0 0))
+    (model ${KIPRJMOD}/imported_3d/705550050.stp
+      (offset (xyz -7 -19 3.5))
       (scale (xyz 1 1 1))
-      (rotate (xyz 0 0 0))
+      (rotate (xyz 90 180 -90))
     )
   )
 
@@ -2214,10 +2219,10 @@
       (net 45 /KeyCol_3))
     (pad 8 thru_hole oval (at 0 -17.78 180) (size 1.7 1.7) (drill 1) (layers *.Cu *.Mask)
       (net 46 /KeyCol_4))
-    (model ${KISYS3DMOD}/Connector_PinSocket_2.54mm.3dshapes/PinSocket_1x08_P2.54mm_Horizontal.wrl
-      (at (xyz 0 0 0))
+    (model ${KIPRJMOD}/imported_3d/705510007.stp
+      (offset (xyz -7.5 -9 3))
       (scale (xyz 1 1 1))
-      (rotate (xyz 0 0 0))
+      (rotate (xyz -90 0 90))
     )
   )
 
