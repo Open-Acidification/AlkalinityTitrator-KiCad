@@ -203,7 +203,7 @@ Wire Wire Line
 	1825 6125 1825 6225
 Wire Wire Line
 	2650 4400 2600 4400
-Text Label 2650 4400 0    50   ~ 0
+Text Label 2600 4500 0    50   ~ 0
 PWM
 $Comp
 L titrator:A4988_BO U2
@@ -989,22 +989,22 @@ Text Label 4150 7525 2    50   ~ 0
 KeyCol_3
 Text Label 4150 7625 2    50   ~ 0
 KeyCol_4
-Text Label 2600 2900 0    50   ~ 0
+Text Label 1000 3100 2    50   ~ 0
 KeyCol_1
 NoConn ~ 2600 2800
-Text Label 1000 3100 2    50   ~ 0
+Text Label 1000 4300 2    50   ~ 0
 KeyCol_2
 Text Label 1000 3600 2    50   ~ 0
 KeyCol_3
 Text Label 1000 3700 2    50   ~ 0
 KeyCol_4
-Text Label 2600 3600 0    50   ~ 0
+Text Label 2600 2900 0    50   ~ 0
 KeyRow_1
-Text Label 2600 4500 0    50   ~ 0
+Text Label 2600 3600 0    50   ~ 0
 KeyRow_2
-Text Label 1000 3500 2    50   ~ 0
+Text Label 2650 4400 0    50   ~ 0
 KeyRow_3
-Text Label 1000 4300 2    50   ~ 0
+Text Label 1000 3500 2    50   ~ 0
 KeyRow_4
 Text Notes 4025 6800 0    50   ~ 0
 Keypad GPIO
@@ -1069,13 +1069,13 @@ Text Label 2125 7425 1    50   ~ 0
 LCD_RS
 Text Label 2225 7425 1    50   ~ 0
 LCD_OV
-Text Label 1000 3300 2    50   ~ 0
-LCD_D7
-Text Label 1000 4000 2    50   ~ 0
-LCD_D6
-Text Label 1000 4100 2    50   ~ 0
-LCD_D5
 Text Label 1000 4200 2    50   ~ 0
+LCD_D7
+Text Label 1000 4100 2    50   ~ 0
+LCD_D6
+Text Label 1000 4000 2    50   ~ 0
+LCD_D5
+Text Label 1000 3300 2    50   ~ 0
 LCD_D4
 Text Label 1000 3900 2    50   ~ 0
 LCD_E
