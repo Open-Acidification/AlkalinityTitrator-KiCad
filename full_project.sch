@@ -968,7 +968,7 @@ U 1 1 605C6E35
 P 4350 7225
 F 0 "J3" H 4430 7217 50  0000 L CNN
 F 1 "Conn_01x08" H 4430 7126 50  0000 L CNN
-F 2 "Connector_Molex:Molex_SL_171971-0008_1x08_P2.54mm_Vertical" H 4350 7225 50  0001 C CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x08_P2.54mm_Horizontal" H 4350 7225 50  0001 C CNN
 F 3 "~" H 4350 7225 50  0001 C CNN
 	1    4350 7225
 	1    0    0    -1  
@@ -1392,7 +1392,7 @@ U 1 1 604B455A
 P 1725 7625
 F 0 "J1" V 1850 7571 50  0000 C CNN
 F 1 "Conn_01x16" V 1941 7571 50  0000 C CNN
-F 2 "Connector_Molex:Molex_SL_171971-0016_1x16_P2.54mm_Vertical" H 1725 7625 50  0001 C CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x16_P2.54mm_Horizontal" H 1725 7625 50  0001 C CNN
 F 3 "~" H 1725 7625 50  0001 C CNN
 	1    1725 7625
 	0    1    1    0   

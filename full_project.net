@@ -1,8 +1,8 @@
 (export (version D)
   (design
-    (source D:\GITRepositories\AlkalinityTitrator-KiCad\full_project.sch)
-    (date "3/5/2021 4:43:36 PM")
-    (tool "Eeschema (5.1.9)-1")
+    (source "C:\\Users\\noahg\\Desktop\\School Stuff\\Senior\\AlkalinityTitrator-KiCad\\full_project.sch")
+    (date "3/5/2021 5:06:14 PM")
+    (tool "Eeschema (5.1.5)-3")
     (sheet (number 1) (name /) (tstamps /)
       (title_block
         (title "Automated Alkalinity Titrator")
@@ -205,7 +205,7 @@
       (tstamp 5F1251A7))
     (comp (ref J3)
       (value Conn_01x08)
-      (footprint Connector_Molex:Molex_SL_171971-0008_1x08_P2.54mm_Vertical)
+      (footprint Connector_PinSocket_2.54mm:PinSocket_1x08_P2.54mm_Horizontal)
       (datasheet ~)
       (libsource (lib Connector_Generic) (part Conn_01x08) (description "Generic connector, single row, 01x08, script generated (kicad-library-utils/schlib/autogen/connector/)"))
       (sheetpath (names /) (tstamps /))
@@ -261,7 +261,7 @@
       (tstamp 5F112236))
     (comp (ref J1)
       (value Conn_01x16)
-      (footprint Connector_Molex:Molex_SL_171971-0016_1x16_P2.54mm_Vertical)
+      (footprint Connector_PinSocket_2.54mm:PinSocket_1x16_P2.54mm_Horizontal)
       (datasheet ~)
       (libsource (lib Connector_Generic) (part Conn_01x16) (description "Generic connector, single row, 01x16, script generated (kicad-library-utils/schlib/autogen/connector/)"))
       (sheetpath (names /) (tstamps /))
@@ -328,9 +328,7 @@
         (alias OPA1602)
         (alias TLV2372)
         (alias LT6237)
-        (alias OPA2277)
-        (alias MCP6022)
-        (alias MCP6V67EMS))
+        (alias OPA2277))
       (description "Dual Operational Amplifiers, DIP-8/SOIC-8/TSSOP-8/VSSOP-8")
       (docs http://www.ti.com/lit/ds/symlink/lm358.pdf)
       (footprints
@@ -591,7 +589,7 @@
         (pin (num 3) (name OUT) (type power_out))))
     (libpart (lib Transistor_BJT) (part PN2222A)
       (description "1A Ic, 40V Vce, NPN Transistor, General Purpose Transistor, TO-92")
-      (docs https://www.onsemi.com/pub/Collateral/PN2222-D.PDF)
+      (docs http://www.fairchildsemi.com/ds/PN/PN2222A.pdf)
       (footprints
         (fp TO?92*))
       (fields
@@ -718,7 +716,7 @@
     (library (logical pspice)
       (uri "C:\\Program Files\\KiCad\\share\\kicad\\library/pspice.lib"))
     (library (logical titrator)
-      (uri D:\GITRepositories\AlkalinityTitrator-KiCad/titrator.lib)))
+      (uri "C:\\Users\\noahg\\Desktop\\School Stuff\\Senior\\AlkalinityTitrator-KiCad/titrator.lib")))
   (nets
     (net (code 1) (name /PSU_12V)
       (node (ref J8) (pin 2))
