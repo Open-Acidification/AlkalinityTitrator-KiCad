@@ -228,23 +228,12 @@ F 3 "https://cdn-shop.adafruit.com/datasheets/ads1115.pdf" H 4500 2725 50  0001 
 	1    0    0    -1  
 $EndComp
 $Comp
-L titrator:MAX31865_BO U3
-U 1 1 5F112236
-P 4800 5375
-F 0 "U3" H 4800 5750 50  0000 C CNN
-F 1 "MAX31865_BO" H 4800 5659 50  0000 C CNN
-F 2 "Titrator_Footprints:MAX31865_BO_Footprint" H 4800 5375 50  0001 C CNN
-F 3 "https://datasheets.maximintegrated.com/en/ds/MAX31865.pdf" H 4800 5375 50  0001 C CNN
-	1    4800 5375
-	1    0    0    -1  
-$EndComp
-$Comp
 L titrator:MAX31865_BO U4
 U 1 1 5F114422
 P 6600 5375
 F 0 "U4" H 6600 5750 50  0000 C CNN
 F 1 "MAX31865_BO" H 6600 5659 50  0000 C CNN
-F 2 "Titrator_Footprints:MAX31865_BO_Footprint" H 6600 5375 50  0001 C CNN
+F 2 "Connector_Molex:Molex_SL_171971-0008_1x08_P2.54mm_Vertical" H 6600 5375 50  0001 C CNN
 F 3 "https://datasheets.maximintegrated.com/en/ds/MAX31865.pdf" H 6600 5375 50  0001 C CNN
 	1    6600 5375
 	1    0    0    -1  
@@ -335,8 +324,6 @@ Text Label 7700 5775 2    50   ~ 0
 PWM
 Text Notes 2325 5650 0    49   ~ 0
 Stepper Driver
-Text Notes 4675 5725 0    49   ~ 0
-CS input initiates and terminates data transfer (enable)
 Text Notes 750  6650 0    49   ~ 0
 Sleep is pulled high on \nbreakout (active low),\nconnecting Reset (active low)\nto sleep will make\nboth pins unused
 Wire Notes Line
@@ -401,23 +388,6 @@ F 3 "~" H 9375 5075 50  0001 C CNN
 	1    9375 5075
 	1    0    0    -1  
 $EndComp
-$Comp
-L Connector_Generic:Conn_01x02 J7
-U 1 1 60265C0F
-P 7925 5200
-F 0 "J7" H 8005 5192 50  0000 L CNN
-F 1 "Conn_01x02" H 8005 5101 50  0000 L CNN
-F 2 "Connector_PinSocket_2.54mm:PinSocket_1x02_P2.54mm_Vertical" H 7925 5200 50  0001 C CNN
-F 3 "~" H 7925 5200 50  0001 C CNN
-	1    7925 5200
-	-1   0    0    1   
-$EndComp
-Wire Wire Line
-	8125 5100 8250 5100
-Wire Wire Line
-	8250 5100 8250 4950
-Wire Wire Line
-	8250 4950 8600 4950
 Wire Wire Line
 	8600 4950 8950 4950
 Wire Wire Line
@@ -428,10 +398,6 @@ Wire Wire Line
 Wire Wire Line
 	8600 5350 8600 5575
 Connection ~ 8600 5350
-Wire Wire Line
-	8250 5200 8250 5275
-Wire Wire Line
-	8125 5200 8250 5200
 Wire Wire Line
 	8950 5000 8950 4950
 Connection ~ 8950 4950
@@ -462,17 +428,6 @@ F 1 "GND" H 8605 6077 50  0000 C CNN
 F 2 "" H 8600 6250 50  0001 C CNN
 F 3 "" H 8600 6250 50  0001 C CNN
 	1    8600 6250
-	-1   0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR08
-U 1 1 602DC306
-P 8250 5275
-F 0 "#PWR08" H 8250 5025 50  0001 C CNN
-F 1 "GND" H 8255 5102 50  0000 C CNN
-F 2 "" H 8250 5275 50  0001 C CNN
-F 3 "" H 8250 5275 50  0001 C CNN
-	1    8250 5275
 	-1   0    0    -1  
 $EndComp
 $Comp
@@ -672,53 +627,14 @@ Text Notes 8150 3500 0    50   ~ 0
 512mV
 Connection ~ 9000 3600
 Wire Wire Line
-	7050 3425 7100 3425
-Connection ~ 7050 3425
-Wire Wire Line
-	7050 3525 7050 3425
-Wire Wire Line
-	7100 3525 7050 3525
-Wire Wire Line
-	7000 3425 7050 3425
-Wire Wire Line
 	8125 3500 8125 3575
 Connection ~ 8125 3500
 Wire Wire Line
 	8125 3425 8125 3500
 Wire Wire Line
-	7525 3800 7450 3800
-Connection ~ 7525 3800
-Wire Wire Line
-	7525 3725 7525 3800
-Wire Wire Line
-	7450 3800 7375 3800
-Connection ~ 7450 3800
-Wire Wire Line
-	7450 3725 7450 3800
-Wire Wire Line
-	7375 3800 7375 3725
-Connection ~ 7375 3800
-Wire Wire Line
-	7600 3800 7525 3800
-Wire Wire Line
-	7600 3725 7600 3800
-Wire Wire Line
-	7375 3875 7375 3800
-Wire Wire Line
 	9000 3950 9000 3800
 Wire Wire Line
 	8400 3700 8400 3950
-$Comp
-L LM4140CCM-1.0:LM4140CCM-1.0 U5
-U 1 1 605F66AC
-P 7425 3525
-F 0 "U5" H 7350 3850 50  0000 C CNN
-F 1 "LM4140CCM-1.0" H 7375 3750 50  0000 C CNN
-F 2 "Titrator_Footprints:SOIC127P599X175-8N" H 7425 3525 50  0001 L BNN
-F 3 "https://www.ti.com/lit/ds/symlink/lm4140.pdf?ts=1613991098025&ref_url=https%253A%252F%252Fwww.google.com%252F" H 7425 3525 50  0001 L BNN
-	1    7425 3525
-	1    0    0    -1  
-$EndComp
 $Comp
 L Device:R R2
 U 1 1 605CB6A6
@@ -800,10 +716,6 @@ Wire Notes Line
 	8050 1925 8050 2350
 Wire Wire Line
 	6325 2375 6550 2375
-Wire Wire Line
-	7725 3425 7725 3125
-Wire Wire Line
-	7725 3125 8125 3125
 Wire Wire Line
 	6550 2375 6550 2475
 Connection ~ 6550 2375
@@ -1029,8 +941,6 @@ Text Label 5725 2925 0    50   ~ 0
 PSU_AGND
 Text Label 5975 4200 0    50   ~ 0
 PSU_AGND
-Text Label 7375 3875 2    50   ~ 0
-PSU_AGND
 Text Label 6550 2900 0    50   ~ 0
 PSU_AGND
 Text Label 10450 1625 3    50   ~ 0
@@ -1058,7 +968,7 @@ U 1 1 605C6E35
 P 4350 7225
 F 0 "J3" H 4430 7217 50  0000 L CNN
 F 1 "Conn_01x08" H 4430 7126 50  0000 L CNN
-F 2 "Connector_PinSocket_2.54mm:PinSocket_1x08_P2.54mm_Vertical" H 4350 7225 50  0001 C CNN
+F 2 "Connector_Molex:Molex_SL_171971-0008_1x08_P2.54mm_Vertical" H 4350 7225 50  0001 C CNN
 F 3 "~" H 4350 7225 50  0001 C CNN
 	1    4350 7225
 	1    0    0    -1  
@@ -1098,77 +1008,66 @@ Text Label 1000 4300 2    50   ~ 0
 KeyRow_4
 Text Notes 4025 6800 0    50   ~ 0
 Keypad GPIO
-$Comp
-L Connector_Generic:Conn_01x12 J1
-U 1 1 605F9DC4
-P 1975 7475
-F 0 "J1" V 2100 7421 50  0000 C CNN
-F 1 "Conn_01x12" V 2191 7421 50  0000 C CNN
-F 2 "Connector_PinSocket_2.54mm:PinSocket_1x12_P2.54mm_Vertical" H 1975 7475 50  0001 C CNN
-F 3 "~" H 1975 7475 50  0001 C CNN
-	1    1975 7475
-	0    1    1    0   
-$EndComp
-Text Notes 1350 7600 0    50   ~ 0
+Text Notes 900  7775 0    50   ~ 0
 K
-Text Notes 2450 7625 0    50   ~ 0
+Text Notes 2750 7025 0    50   ~ 0
 VSS
 $Comp
 L power:GND #PWR010
 U 1 1 605FCEC6
-P 1125 7275
-F 0 "#PWR010" H 1125 7025 50  0001 C CNN
-F 1 "GND" H 1130 7102 50  0000 C CNN
-F 2 "" H 1125 7275 50  0001 C CNN
-F 3 "" H 1125 7275 50  0001 C CNN
-	1    1125 7275
+P 675 7425
+F 0 "#PWR010" H 675 7175 50  0001 C CNN
+F 1 "GND" H 680 7252 50  0000 C CNN
+F 2 "" H 675 7425 50  0001 C CNN
+F 3 "" H 675 7425 50  0001 C CNN
+	1    675  7425
 	1    0    0    -1  
 $EndComp
 $Comp
 L Device:R_POT RV1
 U 1 1 605F7ABE
-P 3225 7175
-F 0 "RV1" V 3018 7175 50  0000 C CNN
-F 1 "R_POT" V 3109 7175 50  0000 C CNN
-F 2 "Potentiometer_THT:Potentiometer_Piher_PT-6-V_Vertical" H 3225 7175 50  0001 C CNN
-F 3 "~" H 3225 7175 50  0001 C CNN
-	1    3225 7175
+P 3175 7325
+F 0 "RV1" V 2968 7325 50  0000 C CNN
+F 1 "R_POT" V 3059 7325 50  0000 C CNN
+F 2 "Potentiometer_THT:Potentiometer_Piher_PT-6-V_Vertical" H 3175 7325 50  0001 C CNN
+F 3 "~" H 3175 7325 50  0001 C CNN
+	1    3175 7325
 	0    1    1    0   
 $EndComp
 Wire Wire Line
-	1375 7275 1375 7175
+	925  7425 925  7325
 Wire Wire Line
-	1375 7175 1125 7175
+	925  7325 675  7325
 Wire Wire Line
-	1125 7175 1125 7275
+	675  7325 675  7425
 $Comp
 L power:+3V3 #PWR011
 U 1 1 606077D3
-P 1475 7075
-F 0 "#PWR011" H 1475 6925 50  0001 C CNN
-F 1 "+3V3" H 1490 7248 50  0000 C CNN
-F 2 "" H 1475 7075 50  0001 C CNN
-F 3 "" H 1475 7075 50  0001 C CNN
-	1    1475 7075
+P 1025 7225
+F 0 "#PWR011" H 1025 7075 50  0001 C CNN
+F 1 "+3V3" H 1040 7398 50  0000 C CNN
+F 2 "" H 1025 7225 50  0001 C CNN
+F 3 "" H 1025 7225 50  0001 C CNN
+	1    1025 7225
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	1475 7275 1475 7075
-Text Label 1575 7275 1    50   ~ 0
+	1025 7425 1025 7225
+Text Label 1125 7425 1    50   ~ 0
 LCD_D7
-Text Label 1675 7275 1    50   ~ 0
+Text Label 1225 7425 1    50   ~ 0
 LCD_D6
-Text Label 1775 7275 1    50   ~ 0
+Text Label 1325 7425 1    50   ~ 0
 LCD_D5
-Text Label 1875 7275 1    50   ~ 0
+Text Label 1425 7425 1    50   ~ 0
 LCD_D4
-Text Notes 1950 7625 0    50   ~ 0
+Text Notes 2400 7775 0    50   ~ 0
 E
-Text Label 1975 7275 1    50   ~ 0
+Text Label 1925 7425 1    50   ~ 0
 LCD_E
-Text Label 2175 7275 1    50   ~ 0
+Text Label 2125 7425 1    50   ~ 0
 LCD_RS
-Text Label 2275 7275 1    50   ~ 0
+Text Label 2225 7425 1    50   ~ 0
 LCD_OV
 Text Label 1000 3300 2    50   ~ 0
 LCD_D7
@@ -1182,7 +1081,7 @@ Text Label 1000 3900 2    50   ~ 0
 LCD_E
 Text Label 1000 4400 2    50   ~ 0
 LCD_RS
-Text Label 3225 7325 3    50   ~ 0
+Text Label 3175 7475 3    50   ~ 0
 LCD_OV
 $Comp
 L power:+5V #PWR012
@@ -1215,55 +1114,55 @@ Wire Wire Line
 $Comp
 L power:+5V #PWR013
 U 1 1 6062E38D
-P 2375 7125
-F 0 "#PWR013" H 2375 6975 50  0001 C CNN
-F 1 "+5V" H 2390 7298 50  0000 C CNN
-F 2 "" H 2375 7125 50  0001 C CNN
-F 3 "" H 2375 7125 50  0001 C CNN
-	1    2375 7125
+P 2325 7275
+F 0 "#PWR013" H 2325 7125 50  0001 C CNN
+F 1 "+5V" H 2340 7448 50  0000 C CNN
+F 2 "" H 2325 7275 50  0001 C CNN
+F 3 "" H 2325 7275 50  0001 C CNN
+	1    2325 7275
 	1    0    0    -1  
 $EndComp
 $Comp
 L power:GND #PWR014
 U 1 1 606300B0
-P 2675 7275
-F 0 "#PWR014" H 2675 7025 50  0001 C CNN
-F 1 "GND" H 2680 7102 50  0000 C CNN
-F 2 "" H 2675 7275 50  0001 C CNN
-F 3 "" H 2675 7275 50  0001 C CNN
-	1    2675 7275
+P 2625 7425
+F 0 "#PWR014" H 2625 7175 50  0001 C CNN
+F 1 "GND" H 2630 7252 50  0000 C CNN
+F 2 "" H 2625 7425 50  0001 C CNN
+F 3 "" H 2625 7425 50  0001 C CNN
+	1    2625 7425
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	2475 7275 2475 7175
+	2425 7425 2425 7325
 Wire Wire Line
-	2475 7175 2675 7175
+	2425 7325 2625 7325
 Wire Wire Line
-	2675 7175 2675 7275
+	2625 7325 2625 7425
 Wire Wire Line
-	2375 7275 2375 7125
+	2325 7425 2325 7275
 Wire Wire Line
-	2075 7275 2075 6875
+	2025 7425 2025 7025
 Wire Wire Line
-	2075 6875 2675 6875
+	2025 7025 2625 7025
 Wire Wire Line
-	2675 6875 2675 7175
-Connection ~ 2675 7175
+	2625 7025 2625 7325
+Connection ~ 2625 7325
 $Comp
 L power:+5V #PWR015
 U 1 1 60660F20
-P 3450 7175
-F 0 "#PWR015" H 3450 7025 50  0001 C CNN
-F 1 "+5V" H 3465 7348 50  0000 C CNN
-F 2 "" H 3450 7175 50  0001 C CNN
-F 3 "" H 3450 7175 50  0001 C CNN
-	1    3450 7175
+P 3400 7325
+F 0 "#PWR015" H 3400 7175 50  0001 C CNN
+F 1 "+5V" H 3415 7498 50  0000 C CNN
+F 2 "" H 3400 7325 50  0001 C CNN
+F 3 "" H 3400 7325 50  0001 C CNN
+	1    3400 7325
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	2675 7175 3075 7175
+	2625 7325 3025 7325
 Wire Wire Line
-	3375 7175 3450 7175
+	3325 7325 3400 7325
 Text Label 1600 2175 2    50   ~ 0
 PSU_5V
 Wire Wire Line
@@ -1347,8 +1246,6 @@ F 3 "~" H 5600 6875 50  0001 C CNN
 $EndComp
 Text Label 6325 3675 0    50   ~ 0
 PSU_A5V
-Text Label 7000 3425 2    50   ~ 0
-PSU_A5V
 $Comp
 L power:PWR_FLAG #FLG0104
 U 1 1 6073724F
@@ -1378,7 +1275,7 @@ F 3 "~" H 5375 6875 50  0001 C CNN
 $EndComp
 Text Label 2175 5925 2    50   ~ 0
 Arduino_GND
-Text Notes 3000 6900 0    50   ~ 0
+Text Notes 2950 7050 0    50   ~ 0
 LCD Blacklight\nAdjustment
 $Comp
 L Device:R R5
@@ -1426,4 +1323,82 @@ Connection ~ 7600 2375
 Wire Wire Line
 	7225 2375 7100 2375
 Connection ~ 7100 2375
+$Comp
+L power:+3V3 #PWR08
+U 1 1 60436F62
+P 8025 4950
+F 0 "#PWR08" H 8025 4800 50  0001 C CNN
+F 1 "+3V3" H 8040 5123 50  0000 C CNN
+F 2 "" H 8025 4950 50  0001 C CNN
+F 3 "" H 8025 4950 50  0001 C CNN
+	1    8025 4950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8025 4950 8600 4950
+Wire Wire Line
+	8125 3125 7875 3125
+Wire Wire Line
+	7875 3125 7875 3500
+Wire Wire Line
+	7875 3500 7550 3500
+$Comp
+L Device:R R7
+U 1 1 6048065F
+P 7550 3275
+F 0 "R7" H 7620 3321 50  0000 L CNN
+F 1 "11.5k" H 7620 3230 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 7480 3275 50  0001 C CNN
+F 3 "~" H 7550 3275 50  0001 C CNN
+	1    7550 3275
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7550 3575 7550 3500
+Wire Wire Line
+	7550 3500 7550 3425
+Connection ~ 7550 3500
+Text Label 7550 3125 2    50   ~ 0
+PSU_A5V
+Text Label 7550 3875 2    50   ~ 0
+PSU_AGND
+$Comp
+L titrator:LT1634 U5
+U 1 1 604A5919
+P 7550 3725
+F 0 "U5" V 7504 3805 50  0000 L CNN
+F 1 "LT1634" V 7595 3805 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline" H 7550 3725 50  0001 C CNN
+F 3 "https://www.analog.com/media/en/technical-documentation/data-sheets/1634ff.pdf" H 7550 3725 50  0001 C CNN
+	1    7550 3725
+	0    1    1    0   
+$EndComp
+Text Notes 4675 5725 0    49   ~ 0
+CS input initiates and terminates data transfer (enable)
+$Comp
+L titrator:MAX31865_BO U3
+U 1 1 5F112236
+P 4800 5375
+F 0 "U3" H 4800 5750 50  0000 C CNN
+F 1 "MAX31865_BO" H 4800 5659 50  0000 C CNN
+F 2 "Connector_Molex:Molex_SL_171971-0008_1x08_P2.54mm_Vertical" H 4800 5375 50  0001 C CNN
+F 3 "https://datasheets.maximintegrated.com/en/ds/MAX31865.pdf" H 4800 5375 50  0001 C CNN
+	1    4800 5375
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x16 J1
+U 1 1 604B455A
+P 1725 7625
+F 0 "J1" V 1850 7571 50  0000 C CNN
+F 1 "Conn_01x16" V 1941 7571 50  0000 C CNN
+F 2 "Connector_Molex:Molex_SL_171971-0016_1x16_P2.54mm_Vertical" H 1725 7625 50  0001 C CNN
+F 3 "~" H 1725 7625 50  0001 C CNN
+	1    1725 7625
+	0    1    1    0   
+$EndComp
+NoConn ~ 1525 7425
+NoConn ~ 1625 7425
+NoConn ~ 1725 7425
+NoConn ~ 1825 7425
 $EndSCHEMATC

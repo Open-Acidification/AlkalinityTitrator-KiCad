@@ -6,12 +6,6 @@ K connector
 F ~
 $ENDCMP
 #
-$CMP LT1634
-D Zener diode
-K diode
-F ~
-$ENDCMP
-#
 $CMP Screw_Terminal_01x04_titrator
 D Generic screw terminal, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)
 K screw terminal
