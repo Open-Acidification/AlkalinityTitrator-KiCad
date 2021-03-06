@@ -250,9 +250,9 @@ Text Label 2975 6525 0    50   ~ 0
 Arduino_VDD
 Text Label 2975 6625 0    50   ~ 0
 Arduino_GND
-Text Label 10025 4750 2    50   ~ 0
+Text Label 10025 5050 2    50   ~ 0
 DIR
-Text Label 10025 4850 2    50   ~ 0
+Text Label 10025 5150 2    50   ~ 0
 STEP
 Wire Wire Line
 	2175 5925 2225 5925
@@ -817,15 +817,12 @@ Wire Wire Line
 NoConn ~ 10025 4550
 NoConn ~ 10025 4650
 NoConn ~ 10025 4950
-NoConn ~ 10025 5050
-NoConn ~ 10025 5150
+NoConn ~ 10025 5650
+NoConn ~ 10025 5750
 NoConn ~ 10025 5250
 NoConn ~ 10025 5350
 NoConn ~ 10025 5450
 NoConn ~ 10025 5550
-NoConn ~ 10025 5650
-NoConn ~ 10025 5750
-NoConn ~ 10025 5850
 NoConn ~ 11025 4550
 NoConn ~ 11025 4650
 NoConn ~ 11025 4950
@@ -1399,4 +1396,7 @@ Wire Wire Line
 	1400 5100 1500 5100
 Connection ~ 1400 5100
 Connection ~ 1500 5100
+NoConn ~ 10025 5850
+NoConn ~ 10025 4850
+NoConn ~ 10025 4750
 $EndSCHEMATC
