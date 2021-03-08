@@ -4,9 +4,9 @@ EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
-Title "Automated Alkalinity Titrator"
-Date "2021-02-04"
-Rev "1.3"
+Title "WWU Alkalinity Titrator"
+Date "2021-03-07"
+Rev "2.0"
 Comp "Open Ocean Project"
 Comment1 "Original Designer: Greg Birge"
 Comment2 ""
@@ -336,16 +336,6 @@ Wire Notes Line
 	1725 6225 1725 6375
 Wire Notes Line
 	1725 6375 2125 6375
-Text Notes 700  1100 0    50   ~ 0
-Absolute Max Rating For Analog Input to Ground: \n        10mA continuous, -0.3 to VDD + 0.3V \nAnalog Input Voltage: +/- \n\nNot suited for 12V max output from \nop amps in original design.
-Wire Notes Line
-	675  600  675  1125
-Wire Notes Line
-	675  1125 2750 1125
-Wire Notes Line
-	2750 1125 2750 600 
-Wire Notes Line
-	2750 600  675  600 
 NoConn ~ 2600 3500
 Text Notes 8225 4900 0    50   ~ 0
 Need vigorous stirring\nfor 10min once the pH \nhits 3.5, then goes back \nto a relaxed speed
@@ -723,9 +713,6 @@ Wire Wire Line
 	6550 2375 6725 2375
 Wire Wire Line
 	6550 2775 6550 2900
-Connection ~ 5725 2775
-Wire Wire Line
-	5725 2775 5725 2925
 Wire Wire Line
 	5725 2475 5725 2775
 Wire Wire Line
@@ -933,8 +920,6 @@ Connection ~ 5175 7525
 Wire Wire Line
 	5175 7525 5375 7525
 Text Label 4950 3000 0    50   ~ 0
-PSU_AGND
-Text Label 5725 2925 0    50   ~ 0
 PSU_AGND
 Text Label 5975 4200 0    50   ~ 0
 PSU_AGND
@@ -1399,4 +1384,58 @@ Connection ~ 1500 5100
 NoConn ~ 10025 5850
 NoConn ~ 10025 4850
 NoConn ~ 10025 4750
+$Comp
+L Mechanical:MountingHole H3
+U 1 1 604FB748
+P 1350 700
+F 0 "H3" H 1450 746 50  0000 L CNN
+F 1 "MountingHole" H 1450 655 50  0000 L CNN
+F 2 "MountingHole:MountingHole_3mm" H 1350 700 50  0001 C CNN
+F 3 "~" H 1350 700 50  0001 C CNN
+	1    1350 700 
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H4
+U 1 1 604FC2A5
+P 1350 975
+F 0 "H4" H 1450 1021 50  0000 L CNN
+F 1 "MountingHole" H 1450 930 50  0000 L CNN
+F 2 "MountingHole:MountingHole_3mm" H 1350 975 50  0001 C CNN
+F 3 "~" H 1350 975 50  0001 C CNN
+	1    1350 975 
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H1
+U 1 1 604FC932
+P 650 700
+F 0 "H1" H 750 746 50  0000 L CNN
+F 1 "MountingHole" H 750 655 50  0000 L CNN
+F 2 "MountingHole:MountingHole_3mm" H 650 700 50  0001 C CNN
+F 3 "~" H 650 700 50  0001 C CNN
+	1    650  700 
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H2
+U 1 1 604FE1D9
+P 650 975
+F 0 "H2" H 750 1021 50  0000 L CNN
+F 1 "MountingHole" H 750 930 50  0000 L CNN
+F 2 "MountingHole:MountingHole_3mm" H 650 975 50  0001 C CNN
+F 3 "~" H 650 975 50  0001 C CNN
+	1    650  975 
+	1    0    0    -1  
+$EndComp
+Wire Notes Line
+	550  550  2050 550 
+Wire Notes Line
+	2050 550  2050 1100
+Wire Notes Line
+	2050 1100 550  1100
+Wire Notes Line
+	550  1100 550  550 
+Text Notes 700  1275 0    50   ~ 0
+Raspberry Pi Mounting Holes\n(Non-Plated Through Holes)
 $EndSCHEMATC
