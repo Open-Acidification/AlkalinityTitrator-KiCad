@@ -48,12 +48,12 @@ SDA
 $Comp
 L power:+3V3 #PWR07
 U 1 1 5F10DA7E
-P 6100 5225
-F 0 "#PWR07" H 6100 5075 50  0001 C CNN
-F 1 "+3V3" H 6115 5398 50  0000 C CNN
-F 2 "" H 6100 5225 50  0001 C CNN
-F 3 "" H 6100 5225 50  0001 C CNN
-	1    6100 5225
+P 6100 4850
+F 0 "#PWR07" H 6100 4700 50  0001 C CNN
+F 1 "+3V3" H 6115 5023 50  0000 C CNN
+F 2 "" H 6100 4850 50  0001 C CNN
+F 3 "" H 6100 4850 50  0001 C CNN
+	1    6100 4850
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -68,7 +68,7 @@ F 3 "" H 1900 2200 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	6100 5225 6250 5225
+	6100 4850 6250 4850
 $Comp
 L power:PWR_FLAG #FLG01
 U 1 1 5F1116DC
@@ -86,16 +86,16 @@ Wire Wire Line
 $Comp
 L power:+3V3 #PWR06
 U 1 1 5F1150D9
-P 4300 5225
-F 0 "#PWR06" H 4300 5075 50  0001 C CNN
-F 1 "+3V3" H 4315 5398 50  0000 C CNN
-F 2 "" H 4300 5225 50  0001 C CNN
-F 3 "" H 4300 5225 50  0001 C CNN
-	1    4300 5225
+P 4600 4850
+F 0 "#PWR06" H 4600 4700 50  0001 C CNN
+F 1 "+3V3" H 4615 5023 50  0000 C CNN
+F 2 "" H 4600 4850 50  0001 C CNN
+F 3 "" H 4600 4850 50  0001 C CNN
+	1    4600 4850
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	4300 5225 4450 5225
+	4600 4850 4750 4850
 Wire Wire Line
 	2600 3100 2700 3100
 Wire Wire Line
@@ -124,71 +124,71 @@ Text Label 2700 4100 0    50   ~ 0
 MOSI
 Text Label 2700 4200 0    50   ~ 0
 SCLK
-NoConn ~ 4450 5425
-NoConn ~ 6250 5425
-NoConn ~ 6950 5525
-NoConn ~ 5150 5525
+NoConn ~ 4750 5050
+NoConn ~ 6250 5050
+NoConn ~ 6950 5150
+NoConn ~ 5450 5150
 $Comp
 L power:GND #PWR04
 U 1 1 5F12F9CC
-P 4050 5375
-F 0 "#PWR04" H 4050 5125 50  0001 C CNN
-F 1 "GND" H 4055 5202 50  0000 C CNN
-F 2 "" H 4050 5375 50  0001 C CNN
-F 3 "" H 4050 5375 50  0001 C CNN
-	1    4050 5375
+P 4350 5000
+F 0 "#PWR04" H 4350 4750 50  0001 C CNN
+F 1 "GND" H 4355 4827 50  0000 C CNN
+F 2 "" H 4350 5000 50  0001 C CNN
+F 3 "" H 4350 5000 50  0001 C CNN
+	1    4350 5000
 	-1   0    0    -1  
 $EndComp
 $Comp
 L power:GND #PWR05
 U 1 1 5F130D30
-P 5850 5375
-F 0 "#PWR05" H 5850 5125 50  0001 C CNN
-F 1 "GND" H 5855 5202 50  0000 C CNN
-F 2 "" H 5850 5375 50  0001 C CNN
-F 3 "" H 5850 5375 50  0001 C CNN
-	1    5850 5375
+P 5850 5000
+F 0 "#PWR05" H 5850 4750 50  0001 C CNN
+F 1 "GND" H 5855 4827 50  0000 C CNN
+F 2 "" H 5850 5000 50  0001 C CNN
+F 3 "" H 5850 5000 50  0001 C CNN
+	1    5850 5000
 	-1   0    0    -1  
 $EndComp
 Wire Wire Line
-	4400 5525 4450 5525
+	4700 5150 4750 5150
 Wire Wire Line
-	6200 5525 6250 5525
-Text Label 4400 5525 2    50   ~ 0
+	6200 5150 6250 5150
+Text Label 4700 5150 2    50   ~ 0
 SCLK
-Text Label 6200 5525 2    50   ~ 0
+Text Label 6200 5150 2    50   ~ 0
 SCLK
 Wire Wire Line
-	5850 5375 5850 5325
+	5850 5000 5850 4950
 Wire Wire Line
-	5850 5325 6250 5325
+	5850 4950 6250 4950
 Wire Wire Line
-	4050 5325 4050 5375
+	4350 4950 4350 5000
 Wire Wire Line
-	4050 5325 4450 5325
+	4350 4950 4750 4950
 Wire Wire Line
-	5200 5225 5150 5225
+	5500 4850 5450 4850
 Wire Wire Line
-	5200 5325 5150 5325
+	5500 4950 5450 4950
 Wire Wire Line
-	5200 5425 5150 5425
+	5500 5050 5450 5050
 Wire Wire Line
-	7000 5225 6950 5225
+	7000 4850 6950 4850
 Wire Wire Line
-	7000 5325 6950 5325
+	7000 4950 6950 4950
 Wire Wire Line
-	7000 5425 6950 5425
-Text Label 5200 5225 0    50   ~ 0
+	7000 5050 6950 5050
+Text Label 5500 4850 0    50   ~ 0
 MOSI
-Text Label 5200 5325 0    50   ~ 0
+Text Label 5500 4950 0    50   ~ 0
 MISO
-Text Label 5200 5425 0    50   ~ 0
+Text Label 5500 5050 0    50   ~ 0
 CE0
-Text Label 7000 5425 0    50   ~ 0
+Text Label 7000 5050 0    50   ~ 0
 CE1
-Text Label 7000 5225 0    50   ~ 0
+Text Label 7000 4850 0    50   ~ 0
 MOSI
-Text Label 7000 5325 0    50   ~ 0
+Text Label 7000 4950 0    50   ~ 0
 MISO
 Wire Wire Line
 	2225 6425 2175 6425
@@ -201,8 +201,6 @@ Wire Wire Line
 Connection ~ 1825 6125
 Wire Wire Line
 	1825 6125 1825 6225
-Wire Wire Line
-	2650 4400 2600 4400
 Text Label 2600 4500 0    50   ~ 0
 PWM
 $Comp
@@ -228,14 +226,14 @@ F 3 "https://cdn-shop.adafruit.com/datasheets/ads1115.pdf" H 4500 2725 50  0001 
 	1    0    0    -1  
 $EndComp
 $Comp
-L titrator:MAX31865_BO U4
+L titrator:MAX31865_FullBO U4
 U 1 1 5F114422
-P 6600 5375
-F 0 "U4" H 6600 5750 50  0000 C CNN
-F 1 "MAX31865_BO" H 6600 5659 50  0000 C CNN
-F 2 "Connector_Molex:Molex_SL_171971-0008_1x08_P2.54mm_Vertical" H 6600 5375 50  0001 C CNN
-F 3 "https://datasheets.maximintegrated.com/en/ds/MAX31865.pdf" H 6600 5375 50  0001 C CNN
-	1    6600 5375
+P 6600 5000
+F 0 "U4" H 6600 5375 50  0000 C CNN
+F 1 "MAX31865_BO" H 6600 5284 50  0000 C CNN
+F 2 "Titrator_Footprints:MAX31865" H 6600 5000 50  0001 C CNN
+F 3 "https://datasheets.maximintegrated.com/en/ds/MAX31865.pdf" H 6600 5000 50  0001 C CNN
+	1    6600 5000
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
@@ -274,8 +272,8 @@ $Comp
 L titrator:Screw_Terminal_01x04_titrator J4
 U 1 1 5F1C81E1
 P 3675 6225
-F 0 "J4" H 3625 6550 50  0000 L CNN
-F 1 "Screw_Terminal_01x04_titrator" H 3600 6425 50  0000 L CNN
+F 0 "J4" H 3625 6450 50  0000 L CNN
+F 1 "Screw_Terminal_01x04_titrator" H 3525 5900 50  0000 L CNN
 F 2 "TerminalBlock:TerminalBlock_bornier-4_P5.08mm" H 3675 6225 50  0001 C CNN
 F 3 "~" H 3675 6225 50  0001 C CNN
 	1    3675 6225
@@ -336,13 +334,10 @@ Wire Notes Line
 	1725 6225 1725 6375
 Wire Notes Line
 	1725 6375 2125 6375
-NoConn ~ 2600 3500
 Text Notes 8225 4900 0    50   ~ 0
 Need vigorous stirring\nfor 10min once the pH \nhits 3.5, then goes back \nto a relaxed speed
 NoConn ~ 4850 2675
 NoConn ~ 4850 2775
-Text Notes 575  1925 0    50   ~ 0
-May want two 3V3 Power Supplies\n* One for Analog (pH Probe)\n* One for Digital (From Raspberry Pi to Everything Else)
 Text Notes 2250 5550 0    50   ~ 0
 KEEP AWAY FROM\nANALOG STUFF
 Wire Notes Line
@@ -721,17 +716,6 @@ Wire Wire Line
 	4850 2475 5725 2475
 $Comp
 L Amplifier_Operational:LMC6062 U7
-U 2 1 6036177B
-P 4600 4000
-F 0 "U7" H 4600 4367 50  0000 C CNN
-F 1 "LMC662" H 4600 4276 50  0000 C CNN
-F 2 "Package_DIP:DIP-8_W7.62mm" H 4600 4000 50  0001 C CNN
-F 3 "https://www.ti.com/lit/ds/symlink/lmc662.pdf?ts=1612139527764&ref_url=https%253A%252F%252Fwww.google.com%252F" H 4600 4000 50  0001 C CNN
-	2    4600 4000
-	1    0    0    -1  
-$EndComp
-$Comp
-L Amplifier_Operational:LMC6062 U7
 U 3 1 603641B9
 P 5950 3425
 F 0 "U7" V 5775 3350 50  0000 L CNN
@@ -743,7 +727,6 @@ F 3 "https://www.ti.com/lit/ds/symlink/lmc662.pdf?ts=1612139527764&ref_url=https
 $EndComp
 NoConn ~ 4300 3900
 NoConn ~ 4300 4100
-NoConn ~ 4900 4000
 Text Notes 4150 4300 0    50   ~ 0
 Second channel of LPF IC
 Wire Wire Line
@@ -984,7 +967,7 @@ Text Label 2600 2900 0    50   ~ 0
 KeyRow_1
 Text Label 2600 3600 0    50   ~ 0
 KeyRow_2
-Text Label 2650 4400 0    50   ~ 0
+Text Label 2600 3500 0    50   ~ 0
 KeyRow_3
 Text Label 1000 3500 2    50   ~ 0
 KeyRow_4
@@ -1349,17 +1332,17 @@ F 3 "https://www.analog.com/media/en/technical-documentation/data-sheets/1634ff.
 	1    7550 3725
 	0    1    1    0   
 $EndComp
-Text Notes 4675 5725 0    49   ~ 0
+Text Notes 4675 4525 0    49   ~ 0
 CS input initiates and terminates data transfer (enable)
 $Comp
-L titrator:MAX31865_BO U3
+L titrator:MAX31865_FullBO U3
 U 1 1 5F112236
-P 4800 5375
-F 0 "U3" H 4800 5750 50  0000 C CNN
-F 1 "MAX31865_BO" H 4800 5659 50  0000 C CNN
-F 2 "Connector_Molex:Molex_SL_171971-0008_1x08_P2.54mm_Vertical" H 4800 5375 50  0001 C CNN
-F 3 "https://datasheets.maximintegrated.com/en/ds/MAX31865.pdf" H 4800 5375 50  0001 C CNN
-	1    4800 5375
+P 5100 5000
+F 0 "U3" H 5100 5375 50  0000 C CNN
+F 1 "MAX31865_BO" H 5100 5284 50  0000 C CNN
+F 2 "Titrator_Footprints:MAX31865" H 5100 5000 50  0001 C CNN
+F 3 "https://datasheets.maximintegrated.com/en/ds/MAX31865.pdf" H 5100 5000 50  0001 C CNN
+	1    5100 5000
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -1438,4 +1421,91 @@ Wire Notes Line
 	550  1100 550  550 
 Text Notes 700  1275 0    50   ~ 0
 Raspberry Pi Mounting Holes\n(Non-Plated Through Holes)
+Wire Wire Line
+	4900 5700 4900 5575
+Wire Wire Line
+	5025 5575 5025 5800
+Wire Wire Line
+	6400 5575 6400 5700
+Wire Wire Line
+	6400 5700 6300 5700
+Wire Wire Line
+	6525 5575 6525 5800
+Wire Wire Line
+	6525 5800 6300 5800
+Wire Wire Line
+	6675 6000 6300 6000
+Wire Wire Line
+	6800 6100 6300 6100
+$Comp
+L SJ-43515TS:SJ-43515TS J7
+U 1 1 6053C631
+P 4350 5900
+F 0 "J7" H 4407 6367 50  0000 C CNN
+F 1 "SJ-43515TS" H 4407 6276 50  0000 C CNN
+F 2 "Titrator_Footprints:CUI_SJ-43515TS" H 4350 5900 50  0001 L BNN
+F 3 "https://www.cuidevices.com/product/resource/sj-4351x.pdf" H 4350 5900 50  0001 L BNN
+F 4 "CUI INC" H 4350 5900 50  0001 L BNN "MANUFACTURER"
+F 5 "MANUFACTURER RECOMMENDATIONS" H 4350 5900 50  0001 L BNN "STANDARD"
+F 6 "1.04" H 4350 5900 50  0001 L BNN "PART_REV"
+	1    4350 5900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5175 5575 5175 6000
+Wire Wire Line
+	4750 6000 5175 6000
+Wire Wire Line
+	5300 5575 5300 6100
+Wire Wire Line
+	4750 6100 5300 6100
+Wire Wire Line
+	4750 5800 5025 5800
+Wire Wire Line
+	4750 5700 4900 5700
+NoConn ~ 4750 5900
+$Comp
+L SJ-43515TS:SJ-43515TS J9
+U 1 1 605A3406
+P 5900 5900
+F 0 "J9" H 5957 6367 50  0000 C CNN
+F 1 "SJ-43515TS" H 5957 6276 50  0000 C CNN
+F 2 "Titrator_Footprints:CUI_SJ-43515TS" H 5900 5900 50  0001 L BNN
+F 3 "https://www.cuidevices.com/product/resource/sj-4351x.pdf" H 5900 5900 50  0001 L BNN
+F 4 "CUI INC" H 5900 5900 50  0001 L BNN "MANUFACTURER"
+F 5 "MANUFACTURER RECOMMENDATIONS" H 5900 5900 50  0001 L BNN "STANDARD"
+F 6 "1.04" H 5900 5900 50  0001 L BNN "PART_REV"
+	1    5900 5900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6675 5575 6675 6000
+Wire Wire Line
+	6800 5575 6800 6100
+NoConn ~ 6300 5900
+Text Notes 4475 6400 0    50   ~ 0
+The RTD Temp Probes WIll Be Connected\nVia 3.5mm (1/8") audio jack
+$Comp
+L power:PWR_FLAG #FLG0103
+U 1 1 605D41A8
+P 5975 4100
+F 0 "#FLG0103" H 5975 4175 50  0001 C CNN
+F 1 "PWR_FLAG" H 5975 4273 50  0000 C CNN
+F 2 "" H 5975 4100 50  0001 C CNN
+F 3 "~" H 5975 4100 50  0001 C CNN
+	1    5975 4100
+	1    0    0    -1  
+$EndComp
+NoConn ~ 4900 4000
+$Comp
+L Amplifier_Operational:LMC6062 U7
+U 2 1 6036177B
+P 4600 4000
+F 0 "U7" H 4600 4367 50  0000 C CNN
+F 1 "LMC662" H 4600 4276 50  0000 C CNN
+F 2 "Package_DIP:DIP-8_W7.62mm" H 4600 4000 50  0001 C CNN
+F 3 "https://www.ti.com/lit/ds/symlink/lmc662.pdf?ts=1612139527764&ref_url=https%253A%252F%252Fwww.google.com%252F" H 4600 4000 50  0001 C CNN
+	2    4600 4000
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC

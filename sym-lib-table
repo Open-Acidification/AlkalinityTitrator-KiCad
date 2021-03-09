@@ -3,4 +3,5 @@
   (lib (name titrator)(type Legacy)(uri ${KIPRJMOD}/titrator.lib)(options "")(descr ""))
   (lib (name LM4140CCM-2.5)(type Legacy)(uri ${KIPRJMOD}/imported_footprints/LM4140CCM-2.5.lib)(options "")(descr ""))
   (lib (name LM4140CCM-1.0)(type Legacy)(uri ${KIPRJMOD}/imported_symbols/LM4140CCM-1.0.lib)(options "")(descr ""))
+  (lib (name SJ-43515TS)(type Legacy)(uri ${KIPRJMOD}/imported_symbols/SJ-43515TS.lib)(options "")(descr ""))
 )
