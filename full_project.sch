@@ -1412,11 +1412,7 @@ F 3 "~" H 650 975 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Notes Line
-	550  550  2050 550 
-Wire Notes Line
-	2050 550  2050 1100
-Wire Notes Line
-	2050 1100 550  1100
+	2700 550  2700 1100
 Wire Notes Line
 	550  1100 550  550 
 Text Notes 700  1275 0    50   ~ 0
@@ -1508,4 +1504,56 @@ F 3 "https://www.ti.com/lit/ds/symlink/lmc662.pdf?ts=1612139527764&ref_url=https
 	2    4600 4000
 	1    0    0    -1  
 $EndComp
+$Comp
+L Mechanical:MountingHole H5
+U 1 1 604871C9
+P 2050 700
+F 0 "H5" H 2150 746 50  0000 L CNN
+F 1 "MountingHole" H 2150 655 50  0000 L CNN
+F 2 "MountingHole:MountingHole_3mm" H 2050 700 50  0001 C CNN
+F 3 "~" H 2050 700 50  0001 C CNN
+	1    2050 700 
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H6
+U 1 1 60491872
+P 2050 975
+F 0 "H6" H 2150 1021 50  0000 L CNN
+F 1 "MountingHole" H 2150 930 50  0000 L CNN
+F 2 "MountingHole:MountingHole_3mm" H 2050 975 50  0001 C CNN
+F 3 "~" H 2050 975 50  0001 C CNN
+	1    2050 975 
+	1    0    0    -1  
+$EndComp
+Wire Notes Line
+	550  550  2700 550 
+Wire Notes Line
+	550  1100 2700 1100
+$Comp
+L Connector:Screw_Terminal_01x02 J10
+U 1 1 604B33B0
+P 3175 4400
+F 0 "J10" H 3255 4392 50  0000 L CNN
+F 1 "Screw_Terminal_01x02" H 3255 4301 50  0000 L CNN
+F 2 "TerminalBlock:TerminalBlock_bornier-2_P5.08mm" H 3175 4400 50  0001 C CNN
+F 3 "~" H 3175 4400 50  0001 C CNN
+	1    3175 4400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2600 4400 2975 4400
+$Comp
+L power:GND #PWR016
+U 1 1 604C156D
+P 2975 4500
+F 0 "#PWR016" H 2975 4250 50  0001 C CNN
+F 1 "GND" H 2980 4327 50  0000 C CNN
+F 2 "" H 2975 4500 50  0001 C CNN
+F 3 "" H 2975 4500 50  0001 C CNN
+	1    2975 4500
+	1    0    0    -1  
+$EndComp
+Text Notes 3100 4675 0    50   ~ 0
+SSR (Solid State Relay)
 $EndSCHEMATC

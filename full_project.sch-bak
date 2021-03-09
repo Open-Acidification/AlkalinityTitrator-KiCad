@@ -201,8 +201,6 @@ Wire Wire Line
 Connection ~ 1825 6125
 Wire Wire Line
 	1825 6125 1825 6225
-Wire Wire Line
-	2650 4400 2600 4400
 Text Label 2600 4500 0    50   ~ 0
 PWM
 $Comp
@@ -336,13 +334,10 @@ Wire Notes Line
 	1725 6225 1725 6375
 Wire Notes Line
 	1725 6375 2125 6375
-NoConn ~ 2600 3500
 Text Notes 8225 4900 0    50   ~ 0
 Need vigorous stirring\nfor 10min once the pH \nhits 3.5, then goes back \nto a relaxed speed
 NoConn ~ 4850 2675
 NoConn ~ 4850 2775
-Text Notes 575  1925 0    50   ~ 0
-May want two 3V3 Power Supplies\n* One for Analog (pH Probe)\n* One for Digital (From Raspberry Pi to Everything Else)
 Text Notes 2250 5550 0    50   ~ 0
 KEEP AWAY FROM\nANALOG STUFF
 Wire Notes Line
@@ -721,17 +716,6 @@ Wire Wire Line
 	4850 2475 5725 2475
 $Comp
 L Amplifier_Operational:LMC6062 U7
-U 2 1 6036177B
-P 4600 4000
-F 0 "U7" H 4600 4367 50  0000 C CNN
-F 1 "LMC662" H 4600 4276 50  0000 C CNN
-F 2 "Package_DIP:DIP-8_W7.62mm" H 4600 4000 50  0001 C CNN
-F 3 "https://www.ti.com/lit/ds/symlink/lmc662.pdf?ts=1612139527764&ref_url=https%253A%252F%252Fwww.google.com%252F" H 4600 4000 50  0001 C CNN
-	2    4600 4000
-	1    0    0    -1  
-$EndComp
-$Comp
-L Amplifier_Operational:LMC6062 U7
 U 3 1 603641B9
 P 5950 3425
 F 0 "U7" V 5775 3350 50  0000 L CNN
@@ -743,7 +727,6 @@ F 3 "https://www.ti.com/lit/ds/symlink/lmc662.pdf?ts=1612139527764&ref_url=https
 $EndComp
 NoConn ~ 4300 3900
 NoConn ~ 4300 4100
-NoConn ~ 4900 4000
 Text Notes 4150 4300 0    50   ~ 0
 Second channel of LPF IC
 Wire Wire Line
@@ -984,7 +967,7 @@ Text Label 2600 2900 0    50   ~ 0
 KeyRow_1
 Text Label 2600 3600 0    50   ~ 0
 KeyRow_2
-Text Label 2650 4400 0    50   ~ 0
+Text Label 2600 3500 0    50   ~ 0
 KeyRow_3
 Text Label 1000 3500 2    50   ~ 0
 KeyRow_4
@@ -1511,6 +1494,18 @@ F 1 "PWR_FLAG" H 5975 4273 50  0000 C CNN
 F 2 "" H 5975 4100 50  0001 C CNN
 F 3 "~" H 5975 4100 50  0001 C CNN
 	1    5975 4100
+	1    0    0    -1  
+$EndComp
+NoConn ~ 4900 4000
+$Comp
+L Amplifier_Operational:LMC6062 U7
+U 2 1 6036177B
+P 4600 4000
+F 0 "U7" H 4600 4367 50  0000 C CNN
+F 1 "LMC662" H 4600 4276 50  0000 C CNN
+F 2 "Package_DIP:DIP-8_W7.62mm" H 4600 4000 50  0001 C CNN
+F 3 "https://www.ti.com/lit/ds/symlink/lmc662.pdf?ts=1612139527764&ref_url=https%253A%252F%252Fwww.google.com%252F" H 4600 4000 50  0001 C CNN
+	2    4600 4000
 	1    0    0    -1  
 $EndComp
 $EndSCHEMATC
