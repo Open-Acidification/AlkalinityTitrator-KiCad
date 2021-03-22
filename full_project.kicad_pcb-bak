@@ -1,8 +1,8 @@
-(kicad_pcb (version 20171130) (host pcbnew "(5.1.9)-1")
+(kicad_pcb (version 20171130) (host pcbnew "(5.1.5)-3")
 
   (general
     (thickness 1.6)
-    (drawings 248)
+    (drawings 246)
     (tracks 634)
     (zones 0)
     (modules 45)
@@ -839,11 +839,6 @@
       (net 18 "Net-(J6-Pad1)"))
     (model "${KIPRJMOD}/imported_3d/BNC Connector.STEP"
       (offset (xyz -7.5 -2 0))
-      (scale (xyz 1 1 1))
-      (rotate (xyz -90 0 0))
-    )
-    (model ${KIPRJMOD}/imported_3d/BNC-Connector-Straight.step
-      (offset (xyz 0 37 6))
       (scale (xyz 1 1 1))
       (rotate (xyz -90 0 0))
     )
@@ -2899,9 +2894,7 @@
   (gr_line (start 89.916 42.926) (end 189.992 42.926) (layer Dwgs.User) (width 0.15) (tstamp 60468A3C))
   (gr_line (start 89.916 143.002) (end 89.916 42.926) (layer Dwgs.User) (width 0.15) (tstamp 60468A3C))
   (gr_line (start 89.916 143.002) (end 189.992 143.002) (layer Dwgs.User) (width 0.15))
-  (gr_line (start 136.398 55.372) (end 136.398 27.305) (layer Dwgs.User) (width 0.15) (tstamp 60468A05))
   (gr_line (start 161.925 55.372) (end 136.398 55.372) (layer Dwgs.User) (width 0.15) (tstamp 60468A03))
-  (gr_line (start 188.468 55.372) (end 162.941 55.372) (layer Dwgs.User) (width 0.15) (tstamp 604689D6))
   (gr_line (start 130.964 76.42) (end 130.456 75.912) (layer F.SilkS) (width 0.12))
   (gr_line (start 130.456 76.928) (end 130.964 76.42) (layer F.SilkS) (width 0.12) (tstamp 6045CE91))
   (gr_line (start 130.964 76.42) (end 130.456 76.928) (layer F.SilkS) (width 0.12))
