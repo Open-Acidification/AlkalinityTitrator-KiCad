@@ -114,9 +114,9 @@ Text Label 2700 3100 0    50   ~ 0
 SDA
 Text Label 2700 3200 0    50   ~ 0
 SCL
-Text Label 2700 3800 0    50   ~ 0
+Text Label 2600 3400 0    50   ~ 0
 CE1
-Text Label 2700 3900 0    50   ~ 0
+Text Label 2600 2800 0    50   ~ 0
 CE0
 Text Label 2700 4000 0    50   ~ 0
 MISO
@@ -306,18 +306,7 @@ Wire Wire Line
 	1900 2400 1900 2300
 Wire Wire Line
 	1400 5000 1400 5100
-$Comp
-L Connector:Raspberry_Pi_2_3 J2
-U 1 1 5F0D7F94
-P 1800 3700
-F 0 "J2" H 1800 4500 50  0000 C CNN
-F 1 "Raspberry_Pi_2_3" H 1800 4400 50  0000 C CNN
-F 2 "Connector_PinSocket_2.54mm:PinSocket_2x20_P2.54mm_Vertical" H 1800 3700 50  0001 C CNN
-F 3 "https://www.raspberrypi.org/documentation/hardware/raspberrypi/schematics/rpi_SCH_3bplus_1p0_reduced.pdf" H 1800 3700 50  0001 C CNN
-	1    1800 3700
-	1    0    0    -1  
-$EndComp
-NoConn ~ 2600 3400
+NoConn ~ 2700 3800
 Text Label 7700 5775 2    50   ~ 0
 PWM
 Text Notes 2325 5650 0    49   ~ 0
@@ -956,7 +945,7 @@ Text Label 4150 7625 2    50   ~ 0
 KeyCol_4
 Text Label 1000 3100 2    50   ~ 0
 KeyCol_1
-NoConn ~ 2600 2800
+NoConn ~ 2700 3900
 Text Label 1000 4300 2    50   ~ 0
 KeyCol_2
 Text Label 1000 3600 2    50   ~ 0
@@ -1556,4 +1545,29 @@ F 3 "" H 2975 4500 50  0001 C CNN
 $EndComp
 Text Notes 3100 4675 0    50   ~ 0
 SSR (Solid State Relay)
+$Comp
+L Connector:Raspberry_Pi_2_3 J2
+U 1 1 5F0D7F94
+P 1800 3700
+F 0 "J2" H 1800 4500 50  0000 C CNN
+F 1 "Raspberry_Pi_2_3" H 1800 4400 50  0000 C CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_2x20_P2.54mm_Vertical" H 1800 3700 50  0001 C CNN
+F 3 "https://www.raspberrypi.org/documentation/hardware/raspberrypi/schematics/rpi_SCH_3bplus_1p0_reduced.pdf" H 1800 3700 50  0001 C CNN
+	1    1800 3700
+	1    0    0    -1  
+$EndComp
+Text Notes 2975 4125 0    50   ~ 0
+IMPORTANT!\nCircuitPython uses CE0 and \nCE1 for chip enable magic. \nDo not use them as chip \nenables! Any other GPIO pin \ncan act as a chip enable \ninstead.
+Wire Notes Line
+	2750 3800 2950 3800
+Wire Notes Line
+	2750 3900 2850 3900
+Wire Notes Line
+	2850 3900 2850 3800
+Text Notes 8775 5650 0    50   ~ 0
+TO DO\nMake this TIP120
+Text Notes 7700 5050 0    50   ~ 0
+TO DO\nHook to 12V
+Text Notes 4075 3525 0    50   ~ 0
+TO DO: ADD NEW CHANNEL
 $EndSCHEMATC
