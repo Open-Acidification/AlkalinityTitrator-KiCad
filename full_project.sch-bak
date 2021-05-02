@@ -14,8 +14,6 @@ Comment3 "Noah Griffith"
 Comment4 "Konrad McClure"
 $EndDescr
 Wire Wire Line
-	4950 2575 4850 2575
-Wire Wire Line
 	4850 2375 4950 2375
 Wire Wire Line
 	4150 2475 4000 2475
@@ -115,9 +113,9 @@ SDA
 Text Label 2700 3200 0    50   ~ 0
 SCL
 Text Label 2600 3400 0    50   ~ 0
-CE1
+CS1
 Text Label 2600 2800 0    50   ~ 0
-CE0
+CS0
 Text Label 2700 4000 0    50   ~ 0
 MISO
 Text Label 2700 4100 0    50   ~ 0
@@ -183,9 +181,9 @@ MOSI
 Text Label 5500 4950 0    50   ~ 0
 MISO
 Text Label 5500 5050 0    50   ~ 0
-CE0
+CS0
 Text Label 7000 5050 0    50   ~ 0
-CE1
+CS1
 Text Label 7000 4850 0    50   ~ 0
 MOSI
 Text Label 7000 4950 0    50   ~ 0
@@ -331,15 +329,8 @@ Text Notes 2250 5550 0    50   ~ 0
 KEEP AWAY FROM\nANALOG STUFF
 Wire Notes Line
 	700  6200 700  6675
-Text Notes 4650 2000 0    50   ~ 0
-Low Pass Filter\nJumper = Bypass
 Text Notes 3600 3350 0    50   ~ 0
-Gain 4: FS=+/-1.024V -> LSB = 31.25μV\nGain 8: FS=+/-0.512V -> LSB = 15.625 μV
-Wire Wire Line
-	4950 2375 4950 2575
-Connection ~ 4950 2575
-Wire Wire Line
-	4950 2575 4950 3000
+Gain 8: FS=+/-0.512V -> LSB = 15.625 μV\nGain 16: FS=+/-0.256V -> LSB = 7.812 μV
 $Comp
 L pspice:DIODE D1
 U 1 1 60226A87
@@ -456,16 +447,16 @@ $EndComp
 Wire Wire Line
 	4000 2350 4000 2375
 Text Notes 6225 1650 0    50   ~ 0
-Level-shifted Configuration\nReference electrode level shifted \nby 512 mV to allow for single-supply
+Level-shifted Configuration\nReference electrode level shifted \nby 2.5V to allow for single-supply
 $Comp
 L Connector_Generic:Conn_01x01 J12
 U 1 1 606D75F0
-P 9425 3800
-F 0 "J12" H 9505 3842 50  0000 L CNN
-F 1 "V_OFFSET" H 9505 3751 50  0000 L CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical" H 9425 3800 50  0001 C CNN
-F 3 "~" H 9425 3800 50  0001 C CNN
-	1    9425 3800
+P 9450 4025
+F 0 "J12" H 9530 4067 50  0000 L CNN
+F 1 "V_OFFSET" H 9530 3976 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical" H 9450 4025 50  0001 C CNN
+F 3 "~" H 9450 4025 50  0001 C CNN
+	1    9450 4025
 	1    0    0    -1  
 $EndComp
 Text Notes 9300 2525 0    50   ~ 0
@@ -505,7 +496,7 @@ F 3 "~" H 6475 2025 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 Text Notes 7850 1900 0    50   ~ 0
-V2(pH) = V(pH) + 512mV
+V2(pH) = V(pH) + 2.5V
 Wire Wire Line
 	8850 2275 8775 2275
 Wire Wire Line
@@ -548,19 +539,17 @@ F 3 "https://www.ti.com/lit/ds/symlink/lmc662.pdf?ts=1612139527764&ref_url=https
 	1    6025 2475
 	-1   0    0    -1  
 $EndComp
-Text Notes 9250 3675 0    50   ~ 0
-Alternately, R2 = 2.7K (5%) \n                = 2.55K (1%)\nOffsets by 210mV for\n+/- 512 mV ADC Setting
 Wire Wire Line
-	5975 4100 6325 4100
-Connection ~ 5975 4100
+	5100 1475 5450 1475
+Connection ~ 5100 1475
 Wire Wire Line
-	5975 4100 5975 4200
+	5100 1475 5100 1575
 Wire Wire Line
-	5600 3675 5600 4100
+	4725 1050 4725 1475
 Wire Wire Line
-	5600 4100 5975 4100
+	4725 1475 5100 1475
 Wire Wire Line
-	5600 3675 5675 3675
+	4725 1050 4800 1050
 Wire Wire Line
 	8850 2275 8850 2700
 NoConn ~ 9250 3000
@@ -571,86 +560,79 @@ Wire Wire Line
 	9000 2800 9250 2800
 Wire Notes Line
 	9250 2550 9250 2175
-Text Notes 9075 3225 3    50   ~ 0
+Text Notes 9075 3450 3    50   ~ 0
 Ref. \nElectrode
 Wire Wire Line
-	9000 3800 9000 3600
-Connection ~ 9000 3800
+	8400 4175 9000 4175
 Wire Wire Line
-	8400 3950 9000 3950
+	8125 3725 8400 3725
 Wire Wire Line
-	9000 3800 9225 3800
+	5450 1050 5400 1050
 Wire Wire Line
-	8125 3500 8400 3500
-Wire Wire Line
-	6325 3675 6275 3675
-Wire Wire Line
-	6325 3675 6325 3800
+	5450 1050 5450 1175
 $Comp
 L Device:C C2
 U 1 1 607325B3
-P 6325 3950
-F 0 "C2" V 6577 3950 50  0000 C CNN
-F 1 "0.1uF" V 6486 3950 50  0000 C CNN
-F 2 "Capacitor_THT:C_Disc_D3.8mm_W2.6mm_P2.50mm" H 6363 3800 50  0001 C CNN
-F 3 "~" H 6325 3950 50  0001 C CNN
-	1    6325 3950
+P 5450 1325
+F 0 "C2" V 5702 1325 50  0000 C CNN
+F 1 "0.1uF" V 5611 1325 50  0000 C CNN
+F 2 "Capacitor_THT:C_Disc_D3.8mm_W2.6mm_P2.50mm" H 5488 1175 50  0001 C CNN
+F 3 "~" H 5450 1325 50  0001 C CNN
+	1    5450 1325
 	1    0    0    -1  
 $EndComp
-Text Notes 8150 3500 0    50   ~ 0
-512mV
-Connection ~ 9000 3600
+Text Notes 7650 3825 0    50   ~ 0
+2.5V Offset
+Connection ~ 9000 3825
 Wire Wire Line
-	8125 3500 8125 3575
-Connection ~ 8125 3500
+	8125 3725 8125 3800
+Connection ~ 8125 3725
 Wire Wire Line
-	8125 3425 8125 3500
+	8125 3650 8125 3725
 Wire Wire Line
-	9000 3950 9000 3800
-Wire Wire Line
-	8400 3700 8400 3950
+	8400 3925 8400 4175
 $Comp
 L Device:R R2
 U 1 1 605CB6A6
-P 8125 3725
-F 0 "R2" H 8195 3771 50  0000 L CNN
-F 1 "10k" H 8195 3680 50  0000 L CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 8055 3725 50  0001 C CNN
-F 3 "~" H 8125 3725 50  0001 C CNN
-	1    8125 3725
+P 8125 3950
+F 0 "R2" H 8195 3996 50  0000 L CNN
+F 1 "10k" H 8195 3905 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 8055 3950 50  0001 C CNN
+F 3 "~" H 8125 3950 50  0001 C CNN
+	1    8125 3950
 	1    0    0    -1  
 $EndComp
 $Comp
 L Device:R R1
 U 1 1 605C9D90
-P 8125 3275
-F 0 "R1" H 8195 3321 50  0000 L CNN
-F 1 "10k" H 8195 3230 50  0000 L CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 8055 3275 50  0001 C CNN
-F 3 "~" H 8125 3275 50  0001 C CNN
-	1    8125 3275
+P 8125 3500
+F 0 "R1" H 8195 3546 50  0000 L CNN
+F 1 "10k" H 8195 3455 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 8055 3500 50  0001 C CNN
+F 3 "~" H 8125 3500 50  0001 C CNN
+	1    8125 3500
 	1    0    0    -1  
 $EndComp
 $Comp
 L Amplifier_Operational:LMC6062 U6
 U 3 1 605BB0C0
-P 5975 3775
-F 0 "U6" V 5800 3700 50  0000 L CNN
-F 1 "LMC662" V 5950 3625 50  0000 L CNN
-F 2 "Package_DIP:DIP-8_W7.62mm" H 5975 3775 50  0001 C CNN
-F 3 "https://www.ti.com/lit/ds/symlink/lmc662.pdf?ts=1612139527764&ref_url=https%253A%252F%252Fwww.google.com%252F" H 5975 3775 50  0001 C CNN
-	3    5975 3775
+P 5100 1150
+F 0 "U6" V 4925 1075 50  0000 L CNN
+F 1 "LMC662" V 5075 1000 50  0000 L CNN
+F 2 "Package_DIP:DIP-8_W7.62mm" H 5100 1150 50  0001 C CNN
+F 3 "https://www.ti.com/lit/ds/symlink/lmc662.pdf?ts=1612139527764&ref_url=https%253A%252F%252Fwww.google.com%252F" H 5100 1150 50  0001 C CNN
+	3    5100 1150
 	0    1    1    0   
 $EndComp
 $Comp
 L Amplifier_Operational:LMC6062 U6
 U 2 1 605B58E4
-P 8700 3600
-F 0 "U6" H 8700 3967 50  0000 C CNN
-F 1 "LMC662" H 8700 3876 50  0000 C CNN
-F 2 "Package_DIP:DIP-8_W7.62mm" H 8700 3600 50  0001 C CNN
-F 3 "https://www.ti.com/lit/ds/symlink/lmc662.pdf?ts=1612139527764&ref_url=https%253A%252F%252Fwww.google.com%252F" H 8700 3600 50  0001 C CNN
-	2    8700 3600
+P 8700 3825
+F 0 "U6" H 8700 4192 50  0000 C CNN
+F 1 "LMC662" H 8700 4101 50  0000 C CNN
+F 2 "Package_DIP:DIP-8_W7.62mm" H 8700 3825 50  0001 C CNN
+F 3 "https://www.ti.com/lit/ds/symlink/lmc662.pdf?ts=1612139527764&ref_url=https%253A%252F%252Fwww.google.com%252F" H 8700 3825 50  0001 C CNN
+	2    8700 3825
 	1    0    0    -1  
 $EndComp
 Text Notes 8900 2650 0    50   ~ 0
@@ -662,7 +644,7 @@ Wire Notes Line
 Wire Notes Line
 	5450 1700 9175 1700
 Wire Wire Line
-	9000 2800 9000 3600
+	9000 2800 9000 3825
 Wire Wire Line
 	5725 2775 6325 2775
 $Comp
@@ -706,36 +688,24 @@ Wire Wire Line
 $Comp
 L Amplifier_Operational:LMC6062 U7
 U 3 1 603641B9
-P 5950 3425
-F 0 "U7" V 5775 3350 50  0000 L CNN
-F 1 "LMC662" V 5925 3275 50  0000 L CNN
-F 2 "Package_DIP:DIP-8_W7.62mm" H 5950 3425 50  0001 C CNN
-F 3 "https://www.ti.com/lit/ds/symlink/lmc662.pdf?ts=1612139527764&ref_url=https%253A%252F%252Fwww.google.com%252F" H 5950 3425 50  0001 C CNN
-	3    5950 3425
+P 5075 800
+F 0 "U7" V 4900 725 50  0000 L CNN
+F 1 "LMC662" V 5050 650 50  0000 L CNN
+F 2 "Package_DIP:DIP-8_W7.62mm" H 5075 800 50  0001 C CNN
+F 3 "https://www.ti.com/lit/ds/symlink/lmc662.pdf?ts=1612139527764&ref_url=https%253A%252F%252Fwww.google.com%252F" H 5075 800 50  0001 C CNN
+	3    5075 800 
 	0    1    1    0   
 $EndComp
-NoConn ~ 4300 3900
-NoConn ~ 4300 4100
-Text Notes 4150 4300 0    50   ~ 0
-Second channel of LPF IC
 Wire Wire Line
-	5650 3325 5600 3325
+	4775 700  4725 700 
 Wire Wire Line
-	5600 3325 5600 3675
-Connection ~ 5600 3675
+	4725 700  4725 1050
+Connection ~ 4725 1050
 Wire Wire Line
-	6250 3325 6325 3325
+	5375 700  5450 700 
 Wire Wire Line
-	6325 3325 6325 3675
-Connection ~ 6325 3675
-Wire Notes Line
-	4100 4325 5175 4325
-Wire Notes Line
-	5175 4325 5175 3575
-Wire Notes Line
-	5175 3575 4100 3575
-Wire Notes Line
-	4100 3575 4100 4325
+	5450 700  5450 1050
+Connection ~ 5450 1050
 $Comp
 L Regulator_Linear:L7805 U8
 U 1 1 603CB9D6
@@ -891,9 +861,9 @@ $EndComp
 Connection ~ 5175 7525
 Wire Wire Line
 	5175 7525 5375 7525
-Text Label 4950 3000 0    50   ~ 0
+Text Label 4950 2375 0    50   ~ 0
 PSU_AGND
-Text Label 5975 4200 0    50   ~ 0
+Text Label 5100 1575 0    50   ~ 0
 PSU_AGND
 Text Label 6550 2900 0    50   ~ 0
 PSU_AGND
@@ -910,7 +880,7 @@ F 3 "https://leadertechinc.com/product/40-series/" H 10450 1125 50  0001 C CNN
 	1    10450 1225
 	1    0    0    -1  
 $EndComp
-Text Label 8125 3875 3    50   ~ 0
+Text Label 8125 4200 2    50   ~ 0
 PSU_AGND
 Text Label 3750 1475 3    50   ~ 0
 PSU_GND
@@ -1192,7 +1162,7 @@ F 3 "~" H 5600 6875 50  0001 C CNN
 	1    5600 6875
 	1    0    0    -1  
 $EndComp
-Text Label 6325 3675 0    50   ~ 0
+Text Label 5450 1050 0    50   ~ 0
 PSU_A5V
 $Comp
 L power:PWR_FLAG #FLG0104
@@ -1284,41 +1254,35 @@ F 3 "" H 8025 4950 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	8025 4950 8600 4950
-Wire Wire Line
-	8125 3125 7875 3125
-Wire Wire Line
-	7875 3125 7875 3500
-Wire Wire Line
-	7875 3500 7550 3500
 $Comp
 L Device:R R7
 U 1 1 6048065F
-P 7550 3275
-F 0 "R7" H 7620 3321 50  0000 L CNN
-F 1 "11.5k" H 7620 3230 50  0000 L CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 7480 3275 50  0001 C CNN
-F 3 "~" H 7550 3275 50  0001 C CNN
-	1    7550 3275
+P 7600 3025
+F 0 "R7" H 7670 3071 50  0000 L CNN
+F 1 "11.5k" H 7670 2980 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 7530 3025 50  0001 C CNN
+F 3 "~" H 7600 3025 50  0001 C CNN
+	1    7600 3025
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	7550 3575 7550 3500
+	7600 3325 7600 3250
 Wire Wire Line
-	7550 3500 7550 3425
-Connection ~ 7550 3500
-Text Label 7550 3125 2    50   ~ 0
+	7600 3250 7600 3175
+Connection ~ 7600 3250
+Text Label 7600 2875 2    50   ~ 0
 PSU_A5V
-Text Label 7550 3875 2    50   ~ 0
+Text Label 7400 3625 2    50   ~ 0
 PSU_AGND
 $Comp
 L titrator:LT1634 U5
 U 1 1 604A5919
-P 7550 3725
-F 0 "U5" V 7504 3805 50  0000 L CNN
-F 1 "LT1634" V 7595 3805 50  0000 L CNN
-F 2 "Package_TO_SOT_THT:TO-92_Inline" H 7550 3725 50  0001 C CNN
-F 3 "https://www.analog.com/media/en/technical-documentation/data-sheets/1634ff.pdf" H 7550 3725 50  0001 C CNN
-	1    7550 3725
+P 7600 3475
+F 0 "U5" V 7554 3555 50  0000 L CNN
+F 1 "LT1634_5V" V 7645 3555 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline" H 7600 3475 50  0001 C CNN
+F 3 "https://www.analog.com/media/en/technical-documentation/data-sheets/1634ff.pdf" H 7600 3475 50  0001 C CNN
+	1    7600 3475
 	0    1    1    0   
 $EndComp
 Text Notes 4675 4525 0    49   ~ 0
@@ -1473,25 +1437,24 @@ The RTD Temp Probes WIll Be Connected\nVia 3.5mm (1/8") audio jack
 $Comp
 L power:PWR_FLAG #FLG0103
 U 1 1 605D41A8
-P 5975 4100
-F 0 "#FLG0103" H 5975 4175 50  0001 C CNN
-F 1 "PWR_FLAG" H 5975 4273 50  0000 C CNN
-F 2 "" H 5975 4100 50  0001 C CNN
-F 3 "~" H 5975 4100 50  0001 C CNN
-	1    5975 4100
+P 5100 1475
+F 0 "#FLG0103" H 5100 1550 50  0001 C CNN
+F 1 "PWR_FLAG" H 5100 1648 50  0000 C CNN
+F 2 "" H 5100 1475 50  0001 C CNN
+F 3 "~" H 5100 1475 50  0001 C CNN
+	1    5100 1475
 	1    0    0    -1  
 $EndComp
-NoConn ~ 4900 4000
 $Comp
 L Amplifier_Operational:LMC6062 U7
 U 2 1 6036177B
-P 4600 4000
-F 0 "U7" H 4600 4367 50  0000 C CNN
-F 1 "LMC662" H 4600 4276 50  0000 C CNN
-F 2 "Package_DIP:DIP-8_W7.62mm" H 4600 4000 50  0001 C CNN
-F 3 "https://www.ti.com/lit/ds/symlink/lmc662.pdf?ts=1612139527764&ref_url=https%253A%252F%252Fwww.google.com%252F" H 4600 4000 50  0001 C CNN
-	2    4600 4000
-	1    0    0    -1  
+P 6025 3825
+F 0 "U7" H 6025 4192 50  0000 C CNN
+F 1 "LMC662" H 6025 4101 50  0000 C CNN
+F 2 "Package_DIP:DIP-8_W7.62mm" H 6025 3825 50  0001 C CNN
+F 3 "https://www.ti.com/lit/ds/symlink/lmc662.pdf?ts=1612139527764&ref_url=https%253A%252F%252Fwww.google.com%252F" H 6025 3825 50  0001 C CNN
+	2    6025 3825
+	-1   0    0    -1  
 $EndComp
 $Comp
 L Mechanical:MountingHole H5
@@ -1556,8 +1519,6 @@ F 3 "https://www.raspberrypi.org/documentation/hardware/raspberrypi/schematics/r
 	1    1800 3700
 	1    0    0    -1  
 $EndComp
-Text Notes 2975 4125 0    50   ~ 0
-IMPORTANT!\nCircuitPython uses CE0 and \nCE1 for chip enable magic. \nDo not use them as chip \nenables! Any other GPIO pin \ncan act as a chip enable \ninstead.
 Wire Notes Line
 	2750 3800 2950 3800
 Wire Notes Line
@@ -1568,4 +1529,60 @@ Text Notes 8775 5650 0    50   ~ 0
 TO DO\nMake this TIP120
 Text Notes 7700 5050 0    50   ~ 0
 TO DO\nHook to 12V
+Text Notes 2975 4125 0    50   ~ 0
+IMPORTANT!\nCircuitPython uses CE0 and \nCE1 for chip enable magic. \nDo not use them as chip \nenables! Any other GPIO pin \ncan act as a chip enable \ninstead.
+Wire Wire Line
+	9000 3825 9000 4025
+Wire Wire Line
+	9000 4025 9250 4025
+Connection ~ 9000 4025
+Wire Wire Line
+	9000 4025 9000 4175
+Wire Wire Line
+	8125 4200 8125 4100
+Wire Wire Line
+	7600 3250 8125 3250
+Wire Wire Line
+	8125 3725 6325 3725
+Wire Wire Line
+	8125 3250 8125 3350
+Wire Wire Line
+	7600 3625 7400 3625
+Wire Wire Line
+	6325 3925 6325 4150
+Wire Wire Line
+	6325 4150 5725 4150
+Wire Wire Line
+	5725 4150 5725 3825
+Wire Wire Line
+	5725 3825 5575 3825
+Wire Wire Line
+	5575 3825 5575 2575
+Wire Wire Line
+	5575 2575 4850 2575
+Connection ~ 5725 3825
+Text Notes 4950 2475 0    50   ~ 0
+pH + 2.5V
+Text Notes 4950 2650 0    50   ~ 0
+2.5V Offset
+Text Notes 6375 3950 0    50   ~ 0
+2.5 V Offset\nVoltage Follower
+Text Notes 4250 3050 0    50   ~ 0
+Configure as \ndifference of A0-A1
+Wire Notes Line
+	4225 2875 4225 3075
+Wire Notes Line
+	4225 3075 5050 3075
+Wire Notes Line
+	5050 3075 5050 2875
+Wire Notes Line
+	5050 2875 4225 2875
+Text Notes 6075 3100 0    50   ~ 0
+1Hz Cutoff  Active \nLow Pass Filter
+Text Notes 3475 825  0    50   ~ 0
+Voltage Regulator\nFor pH Region
+Text Notes 6800 3500 0    50   ~ 0
+Voltage Reference\nKeeps Offset More \nStable
+Wire Notes Line
+	7075 3475 7475 3475
 $EndSCHEMATC
