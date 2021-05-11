@@ -332,6 +332,17 @@ Wire Notes Line
 Text Notes 3600 3350 0    50   ~ 0
 Gain 8: FS=+/-0.512V -> LSB = 15.625 μV\nGain 16: FS=+/-0.256V -> LSB = 7.812 μV
 $Comp
+L pspice:DIODE D1
+U 1 1 60226A87
+P 8600 5150
+F 0 "D1" H 8600 5415 50  0000 C CNN
+F 1 "DIODE" H 8600 5324 50  0000 C CNN
+F 2 "Diode_THT:D_T-1_P12.70mm_Horizontal" H 8600 5150 50  0001 C CNN
+F 3 "~" H 8600 5150 50  0001 C CNN
+	1    8600 5150
+	0    -1   -1   0   
+$EndComp
+$Comp
 L Connector_Generic:Conn_01x02 J14
 U 1 1 60252644
 P 9375 5075
@@ -343,11 +354,15 @@ F 3 "~" H 9375 5075 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
+	8600 4950 8950 4950
+Wire Wire Line
 	9175 4950 9175 5075
+Connection ~ 8600 4950
 Wire Wire Line
 	9175 5175 9175 5350
 Wire Wire Line
 	8600 5350 8600 5575
+Connection ~ 8600 5350
 Wire Wire Line
 	8950 5000 8950 4950
 Connection ~ 8950 4950
@@ -1224,6 +1239,8 @@ F 3 "" H 8025 4950 50  0001 C CNN
 	1    8025 4950
 	1    0    0    -1  
 $EndComp
+Wire Wire Line
+	8025 4950 8600 4950
 $Comp
 L Device:R R7
 U 1 1 6048065F
@@ -1574,21 +1591,4 @@ Wire Notes Line
 	8800 6000 8800 5875
 Wire Notes Line
 	8800 5875 8700 5875
-Connection ~ 8600 5350
-Connection ~ 8600 4950
-Wire Wire Line
-	8025 4950 8600 4950
-Wire Wire Line
-	8600 4950 8950 4950
-$Comp
-L pspice:DIODE D1
-U 1 1 60226A87
-P 8600 5150
-F 0 "D1" H 8600 5415 50  0000 C CNN
-F 1 "DIODE" H 8600 5324 50  0000 C CNN
-F 2 "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal" H 8600 5150 50  0001 C CNN
-F 3 "~" H 8600 5150 50  0001 C CNN
-	1    8600 5150
-	0    -1   -1   0   
-$EndComp
 $EndSCHEMATC

@@ -332,17 +332,6 @@ Wire Notes Line
 Text Notes 3600 3350 0    50   ~ 0
 Gain 8: FS=+/-0.512V -> LSB = 15.625 μV\nGain 16: FS=+/-0.256V -> LSB = 7.812 μV
 $Comp
-L pspice:DIODE D1
-U 1 1 60226A87
-P 8600 5150
-F 0 "D1" H 8600 5415 50  0000 C CNN
-F 1 "DIODE" H 8600 5324 50  0000 C CNN
-F 2 "Diode_THT:D_T-1_P12.70mm_Horizontal" H 8600 5150 50  0001 C CNN
-F 3 "~" H 8600 5150 50  0001 C CNN
-	1    8600 5150
-	0    -1   -1   0   
-$EndComp
-$Comp
 L Connector_Generic:Conn_01x02 J14
 U 1 1 60252644
 P 9375 5075
@@ -354,15 +343,11 @@ F 3 "~" H 9375 5075 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	8600 4950 8950 4950
-Wire Wire Line
 	9175 4950 9175 5075
-Connection ~ 8600 4950
 Wire Wire Line
 	9175 5175 9175 5350
 Wire Wire Line
 	8600 5350 8600 5575
-Connection ~ 8600 5350
 Wire Wire Line
 	8950 5000 8950 4950
 Connection ~ 8950 4950
@@ -422,17 +407,6 @@ Wire Wire Line
 Wire Wire Line
 	8000 5775 7700 5775
 Connection ~ 8000 5775
-$Comp
-L Transistor_BJT:PN2222A Q1
-U 1 1 60229FD1
-P 8500 5775
-F 0 "Q1" H 8690 5821 50  0000 L CNN
-F 1 "PN2222A" H 8690 5730 50  0000 L CNN
-F 2 "Package_TO_SOT_THT:TO-92_Inline" H 8700 5700 50  0001 L CIN
-F 3 "http://www.fairchildsemi.com/ds/PN/PN2222A.pdf" H 8500 5775 50  0001 L CNN
-	1    8500 5775
-	1    0    0    -1  
-$EndComp
 $Comp
 L power:+5V #PWR02
 U 1 1 60247737
@@ -581,8 +555,6 @@ F 3 "~" H 5450 1325 50  0001 C CNN
 	1    5450 1325
 	1    0    0    -1  
 $EndComp
-Text Notes 7650 3825 0    50   ~ 0
-2.5V Offset
 Connection ~ 9000 3825
 Wire Wire Line
 	8125 3725 8125 3800
@@ -1252,8 +1224,6 @@ F 3 "" H 8025 4950 50  0001 C CNN
 	1    8025 4950
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	8025 4950 8600 4950
 $Comp
 L Device:R R7
 U 1 1 6048065F
@@ -1585,4 +1555,40 @@ Text Notes 6800 3500 0    50   ~ 0
 Voltage Reference\nKeeps Offset More \nStable
 Wire Notes Line
 	7075 3475 7475 3475
+Text Notes 7650 3825 0    50   ~ 0
+2.5V Offset
+$Comp
+L Transistor_BJT:TIP120 Q1
+U 1 1 60A34D11
+P 8500 5775
+F 0 "Q1" H 8707 5821 50  0000 L CNN
+F 1 "TIP120" H 8707 5730 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-220-3_Vertical" H 8700 5700 50  0001 L CIN
+F 3 "https://www.onsemi.com/pub/Collateral/TIP120-D.PDF" H 8500 5775 50  0001 L CNN
+	1    8500 5775
+	1    0    0    -1  
+$EndComp
+Text Notes 8700 6325 0    50   ~ 0
+NOTE:\nDouble Check TIP traces\nsince pinout is slightly\nchanged from BJT
+Wire Notes Line
+	8800 6000 8800 5875
+Wire Notes Line
+	8800 5875 8700 5875
+Connection ~ 8600 5350
+Connection ~ 8600 4950
+Wire Wire Line
+	8025 4950 8600 4950
+Wire Wire Line
+	8600 4950 8950 4950
+$Comp
+L pspice:DIODE D1
+U 1 1 60226A87
+P 8600 5150
+F 0 "D1" H 8600 5415 50  0000 C CNN
+F 1 "DIODE" H 8600 5324 50  0000 C CNN
+F 2 "Diode_THT:D_T-1_P12.70mm_Horizontal" H 8600 5150 50  0001 C CNN
+F 3 "~" H 8600 5150 50  0001 C CNN
+	1    8600 5150
+	0    -1   -1   0   
+$EndComp
 $EndSCHEMATC
