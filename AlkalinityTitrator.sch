@@ -269,13 +269,13 @@ Wire Wire Line
 $Comp
 L titrator:Screw_Terminal_01x04_titrator J4
 U 1 1 5F1C81E1
-P 3675 6225
-F 0 "J4" H 3625 6450 50  0000 L CNN
-F 1 "Screw_Terminal_01x04_titrator" H 3525 5900 50  0000 L CNN
-F 2 "Titrator_Footprints:TerminalBlock_bornier-4_P5.08mm" H 3675 6225 50  0001 C CNN
-F 3 "~" H 3675 6225 50  0001 C CNN
-	1    3675 6225
-	1    0    0    -1  
+P 3675 6325
+F 0 "J4" H 3625 6550 50  0000 L CNN
+F 1 "Screw_Terminal_01x04_titrator" H 3575 6625 50  0000 L CNN
+F 2 "Titrator_Footprints:TerminalBlock_bornier-4_P5.08mm" H 3675 6325 50  0001 C CNN
+F 3 "~" H 3675 6325 50  0001 C CNN
+	1    3675 6325
+	1    0    0    1   
 $EndComp
 Wire Wire Line
 	2925 6425 3475 6425
@@ -336,7 +336,7 @@ U 1 1 60252644
 P 9425 5425
 F 0 "J14" H 9505 5417 50  0000 L CNN
 F 1 "Conn_01x02" H 9505 5326 50  0000 L CNN
-F 2 "Titrator_Footprints:PinSocket_1x02_P2.54mm_Vertical" H 9425 5425 50  0001 C CNN
+F 2 "Titrator_Footprints:PinHeader_1x02_P2.54mm_Horizontal" H 9425 5425 50  0001 C CNN
 F 3 "~" H 9425 5425 50  0001 C CNN
 	1    9425 5425
 	1    0    0    -1  
@@ -356,17 +356,6 @@ Wire Wire Line
 	4000 2350 4000 2375
 Text Notes 6225 1650 0    50   ~ 0
 Level-shifted Configuration\nReference electrode level shifted \nby 2.5V to allow for single-supply
-$Comp
-L Connector_Generic:Conn_01x01 J12
-U 1 1 606D75F0
-P 9450 4025
-F 0 "J12" H 9375 4200 50  0000 L CNN
-F 1 "V_OFFSET" H 9275 4125 50  0000 L CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical" H 9450 4025 50  0001 C CNN
-F 3 "~" H 9450 4025 50  0001 C CNN
-	1    9450 4025
-	1    0    0    -1  
-$EndComp
 Text Notes 9300 2525 0    50   ~ 0
 MAKE THESE \nCONNECTIONS\nVERY SHORT \nON PCB
 Wire Notes Line
@@ -781,7 +770,7 @@ U 1 1 5F1251A7
 P 10450 1225
 F 0 "J5" H 10400 1875 50  0000 L CNN
 F 1 "RF_Shield_Two_Pieces" H 10050 1775 50  0000 L CNN
-F 2 "Titrator_Footprints:44-CBSA-1.0X1.5X0.4" H 10450 1125 50  0001 C CNN
+F 2 "Titrator_Footprints:SMS-205_LeaderTech_RFShield" H 10450 1125 50  0001 C CNN
 F 3 "https://leadertechinc.com/product/40-series/" H 10450 1125 50  0001 C CNN
 	1    10450 1225
 	1    0    0    -1  
@@ -790,15 +779,13 @@ Text Label 8125 4200 2    50   ~ 0
 PSU_AGND
 Text Label 3750 1475 3    50   ~ 0
 PSU_GND
-Text Label 2975 6025 0    50   ~ 0
-PSU_GND
 $Comp
 L Connector_Generic:Conn_01x08 J3
 U 1 1 605C6E35
 P 4350 7225
 F 0 "J3" H 4430 7217 50  0000 L CNN
 F 1 "Conn_01x08" H 4430 7126 50  0000 L CNN
-F 2 "Titrator_Footprints:PinSocket_1x08_P2.54mm_Horizontal" H 4350 7225 50  0001 C CNN
+F 2 "Titrator_Footprints:PinHeader_1x08_P2.54mm_Horizontal" H 4350 7225 50  0001 C CNN
 F 3 "~" H 4350 7225 50  0001 C CNN
 	1    4350 7225
 	1    0    0    -1  
@@ -1018,8 +1005,6 @@ Wire Wire Line
 Wire Wire Line
 	2000 5000 2000 5100
 Wire Wire Line
-	1500 5000 1500 5100
-Wire Wire Line
 	1800 5100 1900 5100
 Connection ~ 1800 5100
 Wire Wire Line
@@ -1029,8 +1014,6 @@ Wire Wire Line
 Wire Wire Line
 	1800 5100 1700 5100
 Connection ~ 1700 5100
-Wire Wire Line
-	1500 5100 1600 5100
 Wire Wire Line
 	1600 5100 1700 5100
 Connection ~ 1600 5100
@@ -1049,7 +1032,7 @@ F 3 "" H 1700 5200 50  0001 C CNN
 	1    1700 5200
 	1    0    0    -1  
 $EndComp
-Text Label 2100 5000 0    50   ~ 0
+Text Label 1500 5200 3    50   ~ 0
 PSU_GND
 Wire Wire Line
 	5600 7050 5600 6875
@@ -1195,7 +1178,7 @@ U 1 1 604B455A
 P 1725 7625
 F 0 "J1" V 1850 7571 50  0000 C CNN
 F 1 "Conn_01x16" V 1941 7571 50  0000 C CNN
-F 2 "Titrator_Footprints:PinSocket_1x16_P2.54mm_Horizontal" H 1725 7625 50  0001 C CNN
+F 2 "Titrator_Footprints:PinHeader_1x16_P2.54mm_Horizontal" H 1725 7625 50  0001 C CNN
 F 3 "~" H 1725 7625 50  0001 C CNN
 	1    1725 7625
 	0    1    1    0   
@@ -1204,10 +1187,7 @@ NoConn ~ 1525 7425
 NoConn ~ 1625 7425
 NoConn ~ 1725 7425
 NoConn ~ 1825 7425
-Wire Wire Line
-	1400 5100 1500 5100
 Connection ~ 1400 5100
-Connection ~ 1500 5100
 NoConn ~ 10025 5850
 NoConn ~ 10025 4850
 NoConn ~ 10025 4750
@@ -1260,7 +1240,7 @@ Wire Notes Line
 Wire Notes Line
 	550  1100 550  550 
 Text Notes 700  1275 0    50   ~ 0
-Raspberry Pi Mounting Holes\n(Non-Plated Through Holes)
+Raspberry Pi Mounting Holes +2\n(Non-Plated Through Holes)
 Wire Wire Line
 	4900 5700 4900 5575
 Wire Wire Line
@@ -1418,13 +1398,6 @@ Wire Notes Line
 	2850 3900 2850 3800
 Text Notes 2975 4125 0    50   ~ 0
 IMPORTANT!\nCircuitPython uses CE0 and \nCE1 for chip enable magic. \nDo not use them as chip \nenables! Any other GPIO pin \ncan act as a chip enable \ninstead.
-Wire Wire Line
-	9000 3825 9000 4025
-Wire Wire Line
-	9000 4025 9250 4025
-Connection ~ 9000 4025
-Wire Wire Line
-	9000 4025 9000 4175
 Wire Wire Line
 	8125 4200 8125 4100
 Wire Wire Line
@@ -1607,4 +1580,26 @@ Wire Notes Line
 	9250 3175 9250 3050
 Text Notes 7150 800  0    50   ~ 0
 Schottky Diodes between the ground planes will only\npass signals greater than 0.3V. This keeps them from\ndrifting too far apart while preventing noise from passing
+Wire Wire Line
+	1400 5100 1600 5100
+Wire Wire Line
+	2000 5100 2100 5100
+Wire Wire Line
+	2100 5100 2100 5000
+Connection ~ 2000 5100
+Wire Wire Line
+	1500 5000 1500 5200
+$Comp
+L power:GND #PWR0102
+U 1 1 610412AA
+P 2975 6025
+F 0 "#PWR0102" H 2975 5775 50  0001 C CNN
+F 1 "GND" H 2980 5852 50  0000 C CNN
+F 2 "" H 2975 6025 50  0001 C CNN
+F 3 "" H 2975 6025 50  0001 C CNN
+	1    2975 6025
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	9000 3825 9000 4175
 $EndSCHEMATC
