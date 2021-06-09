@@ -6,9 +6,9 @@ encoding utf-8
 Sheet 1 1
 Title "WWU Alkalinity Titrator"
 Date "2021-03-07"
-Rev "2.0"
+Rev "3.0"
 Comp "Open Ocean Project"
-Comment1 "Original Designer: Greg Birge"
+Comment1 ""
 Comment2 ""
 Comment3 "Noah Griffith"
 Comment4 "Konrad McClure"
@@ -176,17 +176,17 @@ Wire Wire Line
 	7000 4950 6950 4950
 Wire Wire Line
 	7000 5050 6950 5050
-Text Label 5500 4850 0    50   ~ 0
-MOSI
 Text Label 5500 4950 0    50   ~ 0
+MOSI
+Text Label 5500 4850 0    50   ~ 0
 MISO
 Text Label 5500 5050 0    50   ~ 0
 CS0
 Text Label 7000 5050 0    50   ~ 0
 CS1
-Text Label 7000 4850 0    50   ~ 0
-MOSI
 Text Label 7000 4950 0    50   ~ 0
+MOSI
+Text Label 7000 4850 0    50   ~ 0
 MISO
 Wire Wire Line
 	2225 6425 2175 6425
@@ -272,7 +272,7 @@ U 1 1 5F1C81E1
 P 3675 6225
 F 0 "J4" H 3625 6450 50  0000 L CNN
 F 1 "Screw_Terminal_01x04_titrator" H 3525 5900 50  0000 L CNN
-F 2 "TerminalBlock:TerminalBlock_bornier-4_P5.08mm" H 3675 6225 50  0001 C CNN
+F 2 "Titrator_Footprints:TerminalBlock_bornier-4_P5.08mm" H 3675 6225 50  0001 C CNN
 F 3 "~" H 3675 6225 50  0001 C CNN
 	1    3675 6225
 	1    0    0    -1  
@@ -295,7 +295,6 @@ Wire Wire Line
 	2925 6025 2975 6025
 NoConn ~ 1000 2800
 NoConn ~ 1000 2900
-NoConn ~ 1000 3200
 Wire Wire Line
 	1900 2300 2000 2300
 Wire Wire Line
@@ -305,7 +304,7 @@ Wire Wire Line
 Wire Wire Line
 	1400 5000 1400 5100
 NoConn ~ 2700 3800
-Text Label 7700 5775 2    50   ~ 0
+Text Label 8150 5525 2    50   ~ 0
 PWM
 Text Notes 2325 5650 0    49   ~ 0
 Stepper Driver
@@ -334,79 +333,14 @@ Gain 8: FS=+/-0.512V -> LSB = 15.625 Î¼V\nGain 16: FS=+/-0.256V -> LSB = 7.812 Î
 $Comp
 L Connector_Generic:Conn_01x02 J14
 U 1 1 60252644
-P 9375 5075
-F 0 "J14" H 9455 5067 50  0000 L CNN
-F 1 "Conn_01x02" H 9455 4976 50  0000 L CNN
-F 2 "Connector_PinSocket_2.54mm:PinSocket_1x02_P2.54mm_Vertical" H 9375 5075 50  0001 C CNN
-F 3 "~" H 9375 5075 50  0001 C CNN
-	1    9375 5075
+P 9425 5425
+F 0 "J14" H 9505 5417 50  0000 L CNN
+F 1 "Conn_01x02" H 9505 5326 50  0000 L CNN
+F 2 "Titrator_Footprints:PinSocket_1x02_P2.54mm_Vertical" H 9425 5425 50  0001 C CNN
+F 3 "~" H 9425 5425 50  0001 C CNN
+	1    9425 5425
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	9175 4950 9175 5075
-Wire Wire Line
-	9175 5175 9175 5350
-Wire Wire Line
-	8600 5350 8600 5575
-Wire Wire Line
-	8950 5000 8950 4950
-Connection ~ 8950 4950
-Wire Wire Line
-	8950 4950 9175 4950
-Wire Wire Line
-	8950 5300 8950 5350
-Wire Wire Line
-	8600 5350 8950 5350
-Connection ~ 8950 5350
-Wire Wire Line
-	8950 5350 9175 5350
-Wire Wire Line
-	8000 6075 8000 6175
-Wire Wire Line
-	8000 6175 8600 6175
-Wire Wire Line
-	8600 6175 8600 5975
-Wire Wire Line
-	8600 6175 8600 6250
-Connection ~ 8600 6175
-$Comp
-L power:GND #PWR09
-U 1 1 602DB8F1
-P 8600 6250
-F 0 "#PWR09" H 8600 6000 50  0001 C CNN
-F 1 "GND" H 8605 6077 50  0000 C CNN
-F 2 "" H 8600 6250 50  0001 C CNN
-F 3 "" H 8600 6250 50  0001 C CNN
-	1    8600 6250
-	-1   0    0    -1  
-$EndComp
-$Comp
-L Device:C C5
-U 1 1 602DCACA
-P 8950 5150
-F 0 "C5" H 9065 5196 50  0000 L CNN
-F 1 "0.1uF" H 9065 5105 50  0000 L CNN
-F 2 "Capacitor_THT:C_Disc_D3.8mm_W2.6mm_P2.50mm" H 8988 5000 50  0001 C CNN
-F 3 "~" H 8950 5150 50  0001 C CNN
-	1    8950 5150
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R R3
-U 1 1 6021489B
-P 8000 5925
-F 0 "R3" H 8070 5971 50  0000 L CNN
-F 1 "10k" H 8070 5880 50  0000 L CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 7930 5925 50  0001 C CNN
-F 3 "~" H 8000 5925 50  0001 C CNN
-	1    8000 5925
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	8300 5775 8000 5775
-Wire Wire Line
-	8000 5775 7700 5775
-Connection ~ 8000 5775
 $Comp
 L power:+5V #PWR02
 U 1 1 60247737
@@ -426,8 +360,8 @@ $Comp
 L Connector_Generic:Conn_01x01 J12
 U 1 1 606D75F0
 P 9450 4025
-F 0 "J12" H 9530 4067 50  0000 L CNN
-F 1 "V_OFFSET" H 9530 3976 50  0000 L CNN
+F 0 "J12" H 9375 4200 50  0000 L CNN
+F 1 "V_OFFSET" H 9275 4125 50  0000 L CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical" H 9450 4025 50  0001 C CNN
 F 3 "~" H 9450 4025 50  0001 C CNN
 	1    9450 4025
@@ -701,7 +635,7 @@ U 1 1 603D308C
 P 10525 5150
 F 0 "A1" H 10050 4375 50  0000 C CNN
 F 1 "Arduino_Nano_v3.x" H 9725 4300 50  0000 C CNN
-F 2 "Module:Arduino_Nano" H 10525 5150 50  0001 C CIN
+F 2 "Titrator_Footprints:Arduino_Nano" H 10525 5150 50  0001 C CIN
 F 3 "http://www.mouser.com/pdfdocs/Gravitech_Arduino_Nano3_0.pdf" H 10525 5150 50  0001 C CNN
 	1    10525 5150
 	1    0    0    -1  
@@ -760,7 +694,7 @@ U 1 1 60540EED
 P 5950 7050
 F 0 "J8" H 6030 7092 50  0000 L CNN
 F 1 "Screw_Terminal_01x03" H 6030 7001 50  0000 L CNN
-F 2 "TerminalBlock:TerminalBlock_bornier-3_P5.08mm" H 5950 7050 50  0001 C CNN
+F 2 "Titrator_Footprints:TerminalBlock_bornier-3_P5.08mm" H 5950 7050 50  0001 C CNN
 F 3 "~" H 5950 7050 50  0001 C CNN
 	1    5950 7050
 	1    0    0    -1  
@@ -864,7 +798,7 @@ U 1 1 605C6E35
 P 4350 7225
 F 0 "J3" H 4430 7217 50  0000 L CNN
 F 1 "Conn_01x08" H 4430 7126 50  0000 L CNN
-F 2 "Connector_PinSocket_2.54mm:PinSocket_1x08_P2.54mm_Horizontal" H 4350 7225 50  0001 C CNN
+F 2 "Titrator_Footprints:PinSocket_1x08_P2.54mm_Horizontal" H 4350 7225 50  0001 C CNN
 F 3 "~" H 4350 7225 50  0001 C CNN
 	1    4350 7225
 	1    0    0    -1  
@@ -906,8 +840,6 @@ Text Notes 4025 6800 0    50   ~ 0
 Keypad GPIO
 Text Notes 900  7775 0    50   ~ 0
 K
-Text Notes 2750 7025 0    50   ~ 0
-VSS
 $Comp
 L power:GND #PWR010
 U 1 1 605FCEC6
@@ -925,7 +857,7 @@ U 1 1 605F7ABE
 P 3175 7325
 F 0 "RV1" V 2968 7325 50  0000 C CNN
 F 1 "R_POT" V 3059 7325 50  0000 C CNN
-F 2 "Potentiometer_THT:Potentiometer_Piher_PT-6-V_Vertical" H 3175 7325 50  0001 C CNN
+F 2 "Titrator_Footprints:Potentiometer_Piher_PT-6-V_Vertical" H 3175 7325 50  0001 C CNN
 F 3 "~" H 3175 7325 50  0001 C CNN
 	1    3175 7325
 	0    1    1    0   
@@ -1214,17 +1146,6 @@ Wire Wire Line
 	7225 2375 7100 2375
 Connection ~ 7100 2375
 $Comp
-L power:+3V3 #PWR08
-U 1 1 60436F62
-P 8025 4950
-F 0 "#PWR08" H 8025 4800 50  0001 C CNN
-F 1 "+3V3" H 8040 5123 50  0000 C CNN
-F 2 "" H 8025 4950 50  0001 C CNN
-F 3 "" H 8025 4950 50  0001 C CNN
-	1    8025 4950
-	1    0    0    -1  
-$EndComp
-$Comp
 L Device:R R7
 U 1 1 6048065F
 P 7600 3025
@@ -1274,7 +1195,7 @@ U 1 1 604B455A
 P 1725 7625
 F 0 "J1" V 1850 7571 50  0000 C CNN
 F 1 "Conn_01x16" V 1941 7571 50  0000 C CNN
-F 2 "Connector_PinSocket_2.54mm:PinSocket_1x16_P2.54mm_Horizontal" H 1725 7625 50  0001 C CNN
+F 2 "Titrator_Footprints:PinSocket_1x16_P2.54mm_Horizontal" H 1725 7625 50  0001 C CNN
 F 3 "~" H 1725 7625 50  0001 C CNN
 	1    1725 7625
 	0    1    1    0   
@@ -1296,7 +1217,7 @@ U 1 1 604FB748
 P 1350 700
 F 0 "H3" H 1450 746 50  0000 L CNN
 F 1 "MountingHole" H 1450 655 50  0000 L CNN
-F 2 "MountingHole:MountingHole_3mm" H 1350 700 50  0001 C CNN
+F 2 "Titrator_Footprints:MountingHole_3mm" H 1350 700 50  0001 C CNN
 F 3 "~" H 1350 700 50  0001 C CNN
 	1    1350 700 
 	1    0    0    -1  
@@ -1307,7 +1228,7 @@ U 1 1 604FC2A5
 P 1350 975
 F 0 "H4" H 1450 1021 50  0000 L CNN
 F 1 "MountingHole" H 1450 930 50  0000 L CNN
-F 2 "MountingHole:MountingHole_3mm" H 1350 975 50  0001 C CNN
+F 2 "Titrator_Footprints:MountingHole_3mm" H 1350 975 50  0001 C CNN
 F 3 "~" H 1350 975 50  0001 C CNN
 	1    1350 975 
 	1    0    0    -1  
@@ -1318,7 +1239,7 @@ U 1 1 604FC932
 P 650 700
 F 0 "H1" H 750 746 50  0000 L CNN
 F 1 "MountingHole" H 750 655 50  0000 L CNN
-F 2 "MountingHole:MountingHole_3mm" H 650 700 50  0001 C CNN
+F 2 "Titrator_Footprints:MountingHole_3mm" H 650 700 50  0001 C CNN
 F 3 "~" H 650 700 50  0001 C CNN
 	1    650  700 
 	1    0    0    -1  
@@ -1329,7 +1250,7 @@ U 1 1 604FE1D9
 P 650 975
 F 0 "H2" H 750 1021 50  0000 L CNN
 F 1 "MountingHole" H 750 930 50  0000 L CNN
-F 2 "MountingHole:MountingHole_3mm" H 650 975 50  0001 C CNN
+F 2 "Titrator_Footprints:MountingHole_3mm" H 650 975 50  0001 C CNN
 F 3 "~" H 650 975 50  0001 C CNN
 	1    650  975 
 	1    0    0    -1  
@@ -1432,7 +1353,7 @@ U 1 1 604871C9
 P 2050 700
 F 0 "H5" H 2150 746 50  0000 L CNN
 F 1 "MountingHole" H 2150 655 50  0000 L CNN
-F 2 "MountingHole:MountingHole_3mm" H 2050 700 50  0001 C CNN
+F 2 "Titrator_Footprints:MountingHole_3mm" H 2050 700 50  0001 C CNN
 F 3 "~" H 2050 700 50  0001 C CNN
 	1    2050 700 
 	1    0    0    -1  
@@ -1443,7 +1364,7 @@ U 1 1 60491872
 P 2050 975
 F 0 "H6" H 2150 1021 50  0000 L CNN
 F 1 "MountingHole" H 2150 930 50  0000 L CNN
-F 2 "MountingHole:MountingHole_3mm" H 2050 975 50  0001 C CNN
+F 2 "Titrator_Footprints:MountingHole_3mm" H 2050 975 50  0001 C CNN
 F 3 "~" H 2050 975 50  0001 C CNN
 	1    2050 975 
 	1    0    0    -1  
@@ -1458,7 +1379,7 @@ U 1 1 604B33B0
 P 3175 4400
 F 0 "J10" H 3255 4392 50  0000 L CNN
 F 1 "Screw_Terminal_01x02" H 3255 4301 50  0000 L CNN
-F 2 "TerminalBlock:TerminalBlock_bornier-2_P5.08mm" H 3175 4400 50  0001 C CNN
+F 2 "Titrator_Footprints:TerminalBlock_bornier-2_P5.08mm" H 3175 4400 50  0001 C CNN
 F 3 "~" H 3175 4400 50  0001 C CNN
 	1    3175 4400
 	1    0    0    -1  
@@ -1484,7 +1405,7 @@ U 1 1 5F0D7F94
 P 1800 3700
 F 0 "J2" H 1800 4500 50  0000 C CNN
 F 1 "Raspberry_Pi_2_3" H 1800 4400 50  0000 C CNN
-F 2 "Connector_PinSocket_2.54mm:PinSocket_2x20_P2.54mm_Vertical" H 1800 3700 50  0001 C CNN
+F 2 "Titrator_Footprints:RaspberryPi" H 1800 3700 50  0001 C CNN
 F 3 "https://www.raspberrypi.org/documentation/hardware/raspberrypi/schematics/rpi_SCH_3bplus_1p0_reduced.pdf" H 1800 3700 50  0001 C CNN
 	1    1800 3700
 	1    0    0    -1  
@@ -1495,10 +1416,6 @@ Wire Notes Line
 	2750 3900 2850 3900
 Wire Notes Line
 	2850 3900 2850 3800
-Text Notes 8775 5650 0    50   ~ 0
-TO DO\nMake this TIP120
-Text Notes 7700 5050 0    50   ~ 0
-TO DO\nHook to 12V
 Text Notes 2975 4125 0    50   ~ 0
 IMPORTANT!\nCircuitPython uses CE0 and \nCE1 for chip enable magic. \nDo not use them as chip \nenables! Any other GPIO pin \ncan act as a chip enable \ninstead.
 Wire Wire Line
@@ -1558,37 +1475,136 @@ Wire Notes Line
 Text Notes 7650 3825 0    50   ~ 0
 2.5V Offset
 $Comp
-L Transistor_BJT:TIP120 Q1
-U 1 1 60A34D11
-P 8500 5775
-F 0 "Q1" H 8707 5821 50  0000 L CNN
-F 1 "TIP120" H 8707 5730 50  0000 L CNN
-F 2 "Package_TO_SOT_THT:TO-220-3_Vertical" H 8700 5700 50  0001 L CIN
-F 3 "https://www.onsemi.com/pub/Collateral/TIP120-D.PDF" H 8500 5775 50  0001 L CNN
-	1    8500 5775
+L titrator:BD65496MUV_BO U9
+U 1 1 60C1E0E7
+P 8500 5425
+F 0 "U9" H 8500 5865 50  0000 C CNN
+F 1 "BD65496MUV_BO" H 8500 5774 50  0000 C CNN
+F 2 "Titrator_Footprints:BD65496MUV_BO_Footprint" H 8500 5750 50  0001 C CNN
+F 3 "https://www.pololu.com/file/0J886/bd65496muv-e.pdf" H 8500 5750 50  0001 C CNN
+	1    8500 5425
 	1    0    0    -1  
 $EndComp
-Text Notes 8700 6325 0    50   ~ 0
-NOTE:\nDouble Check TIP traces\nsince pinout is slightly\nchanged from BJT
-Wire Notes Line
-	8800 6000 8800 5875
-Wire Notes Line
-	8800 5875 8700 5875
-Connection ~ 8600 5350
-Connection ~ 8600 4950
-Wire Wire Line
-	8025 4950 8600 4950
-Wire Wire Line
-	8600 4950 8950 4950
+NoConn ~ 8150 5225
+NoConn ~ 8150 5325
+NoConn ~ 8150 5425
 $Comp
-L pspice:DIODE D1
-U 1 1 60226A87
-P 8600 5150
-F 0 "D1" H 8600 5415 50  0000 C CNN
-F 1 "DIODE" H 8600 5324 50  0000 C CNN
-F 2 "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal" H 8600 5150 50  0001 C CNN
-F 3 "~" H 8600 5150 50  0001 C CNN
-	1    8600 5150
-	0    -1   -1   0   
+L power:+3V3 #PWR018
+U 1 1 60C4FFFD
+P 8975 5225
+F 0 "#PWR018" H 8975 5075 50  0001 C CNN
+F 1 "+3V3" H 9000 5400 50  0000 C CNN
+F 2 "" H 8975 5225 50  0001 C CNN
+F 3 "" H 8975 5225 50  0001 C CNN
+	1    8975 5225
+	1    0    0    -1  
 $EndComp
+Wire Wire Line
+	8975 5225 8850 5225
+$Comp
+L power:GND #PWR017
+U 1 1 60C5B809
+P 8925 5725
+F 0 "#PWR017" H 8925 5475 50  0001 C CNN
+F 1 "GND" H 8930 5552 50  0000 C CNN
+F 2 "" H 8925 5725 50  0001 C CNN
+F 3 "" H 8925 5725 50  0001 C CNN
+	1    8925 5725
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8850 5725 8925 5725
+Wire Wire Line
+	8925 5725 8925 5325
+Wire Wire Line
+	8925 5325 8850 5325
+Connection ~ 8925 5725
+Text Label 8975 5625 0    50   ~ 0
+PSU_12V
+Wire Wire Line
+	8850 5625 8975 5625
+Wire Wire Line
+	8850 5525 9225 5525
+Wire Wire Line
+	8850 5425 9225 5425
+Text Label 8150 5625 2    50   ~ 0
+MOT_DIR
+Text Label 1000 3200 2    50   ~ 0
+MOT_DIR
+Text Notes 7575 5150 0    50   ~ 0
+Don't konw \nwhat this\nis good for, \nbut why not
+$Comp
+L power:+3V3 #PWR08
+U 1 1 60CA7346
+P 7650 5725
+F 0 "#PWR08" H 7650 5575 50  0001 C CNN
+F 1 "+3V3" H 7675 5900 50  0000 C CNN
+F 2 "" H 7650 5725 50  0001 C CNN
+F 3 "" H 7650 5725 50  0001 C CNN
+	1    7650 5725
+	1    0    0    -1  
+$EndComp
+Wire Notes Line
+	7900 5175 7900 5525
+Wire Wire Line
+	7650 5725 8150 5725
+Text Label 8500 1400 0    50   ~ 0
+PSU_AGND
+$Comp
+L power:GND #PWR09
+U 1 1 60CCD867
+P 7850 1400
+F 0 "#PWR09" H 7850 1150 50  0001 C CNN
+F 1 "GND" H 7855 1227 50  0000 C CNN
+F 2 "" H 7850 1400 50  0001 C CNN
+F 3 "" H 7850 1400 50  0001 C CNN
+	1    7850 1400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8025 1400 7925 1400
+Wire Wire Line
+	8425 1400 8325 1400
+$Comp
+L Device:D_Schottky D2
+U 1 1 60CE4022
+P 8175 1400
+F 0 "D2" H 8175 1617 50  0000 C CNN
+F 1 "1N5817-TP" H 8175 1526 50  0000 C CNN
+F 2 "Diode_THT:D_DO-41_SOD81_P7.62mm_Horizontal" H 8175 1400 50  0001 C CNN
+F 3 "https://www.digikey.com/en/products/detail/micro-commercial-co/1N5817-TP/950394" H 8175 1400 50  0001 C CNN
+	1    8175 1400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:D_Schottky D1
+U 1 1 60CE54BD
+P 8175 1075
+F 0 "D1" H 8175 858 50  0000 C CNN
+F 1 "1N5817-TP" H 8175 949 50  0000 C CNN
+F 2 "Diode_THT:D_DO-41_SOD81_P7.62mm_Horizontal" H 8175 1075 50  0001 C CNN
+F 3 "https://www.digikey.com/en/products/detail/micro-commercial-co/1N5817-TP/950394" H 8175 1075 50  0001 C CNN
+	1    8175 1075
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	7925 1400 7925 1075
+Wire Wire Line
+	7925 1075 8025 1075
+Connection ~ 7925 1400
+Wire Wire Line
+	8325 1075 8425 1075
+Wire Wire Line
+	8425 1075 8425 1400
+Wire Wire Line
+	7925 1400 7850 1400
+Wire Wire Line
+	8425 1400 8500 1400
+Connection ~ 8425 1400
+Text Notes 9225 3275 0    50   ~ 0
+For non-connected legs
+Wire Notes Line
+	9250 3175 9250 3050
+Text Notes 7150 800  0    50   ~ 0
+Schottky Diodes between the ground planes will only\npass signals greater than 0.3V. This keeps them from\ndrifting too far apart while preventing noise from passing
 $EndSCHEMATC
