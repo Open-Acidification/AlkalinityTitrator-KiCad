@@ -356,17 +356,6 @@ Wire Wire Line
 	4000 2350 4000 2375
 Text Notes 6225 1650 0    50   ~ 0
 Level-shifted Configuration\nReference electrode level shifted \nby 2.5V to allow for single-supply
-$Comp
-L Connector_Generic:Conn_01x01 J12
-U 1 1 606D75F0
-P 9450 4025
-F 0 "J12" H 9375 4200 50  0000 L CNN
-F 1 "V_OFFSET" H 9275 4125 50  0000 L CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical" H 9450 4025 50  0001 C CNN
-F 3 "~" H 9450 4025 50  0001 C CNN
-	1    9450 4025
-	1    0    0    -1  
-$EndComp
 Text Notes 9300 2525 0    50   ~ 0
 MAKE THESE \nCONNECTIONS\nVERY SHORT \nON PCB
 Wire Notes Line
@@ -615,17 +604,17 @@ Connection ~ 5450 1050
 $Comp
 L Regulator_Linear:L7805 U8
 U 1 1 603CB9D6
-P 3750 1175
-F 0 "U8" H 3750 1417 50  0000 C CNN
-F 1 "L7805" H 3750 1326 50  0000 C CNN
-F 2 "Titrator_Footprints:78XXS" H 3775 1025 50  0001 L CIN
-F 3 "http://www.st.com/content/ccc/resource/technical/document/datasheet/41/4f/b3/b0/12/d4/47/88/CD00000444.pdf/files/CD00000444.pdf/jcr:content/translations/en.CD00000444.pdf" H 3750 1125 50  0001 C CNN
-	1    3750 1175
+P 3750 1300
+F 0 "U8" H 3750 1542 50  0000 C CNN
+F 1 "L7805" H 3750 1451 50  0000 C CNN
+F 2 "Titrator_Footprints:78XXS" H 3775 1150 50  0001 L CIN
+F 3 "http://www.st.com/content/ccc/resource/technical/document/datasheet/41/4f/b3/b0/12/d4/47/88/CD00000444.pdf/files/CD00000444.pdf/jcr:content/translations/en.CD00000444.pdf" H 3750 1250 50  0001 C CNN
+	1    3750 1300
 	1    0    0    -1  
 $EndComp
-Text Label 4050 1175 0    50   ~ 0
+Text Label 4350 1300 0    50   ~ 0
 PSU_A5V
-Text Label 3450 1175 2    50   ~ 0
+Text Label 3150 1300 2    50   ~ 0
 PSU_12V
 Wire Notes Line
 	9175 3900 9175 4300
@@ -788,7 +777,7 @@ F 3 "https://leadertechinc.com/product/40-series/" H 10450 1125 50  0001 C CNN
 $EndComp
 Text Label 8125 4200 2    50   ~ 0
 PSU_AGND
-Text Label 3750 1475 3    50   ~ 0
+Text Label 3750 1725 3    50   ~ 0
 PSU_GND
 $Comp
 L Connector_Generic:Conn_01x08 J3
@@ -1410,13 +1399,6 @@ Wire Notes Line
 Text Notes 2975 4125 0    50   ~ 0
 IMPORTANT!\nCircuitPython uses CE0 and \nCE1 for chip enable magic. \nDo not use them as chip \nenables! Any other GPIO pin \ncan act as a chip enable \ninstead.
 Wire Wire Line
-	9000 3825 9000 4025
-Wire Wire Line
-	9000 4025 9250 4025
-Connection ~ 9000 4025
-Wire Wire Line
-	9000 4025 9000 4175
-Wire Wire Line
 	8125 4200 8125 4100
 Wire Wire Line
 	7600 3250 8125 3250
@@ -1457,7 +1439,7 @@ Wire Notes Line
 	5050 2875 4225 2875
 Text Notes 6075 3100 0    50   ~ 0
 1Hz Cutoff  Active \nLow Pass Filter
-Text Notes 3475 825  0    50   ~ 0
+Text Notes 3450 675  0    50   ~ 0
 Voltage Regulator\nFor pH Region
 Text Notes 6800 3500 0    50   ~ 0
 Voltage Reference\nKeeps Offset More \nStable
@@ -1608,14 +1590,65 @@ Connection ~ 2000 5100
 Wire Wire Line
 	1500 5000 1500 5200
 $Comp
-L power:GND #PWR?
+L power:GND #PWR0102
 U 1 1 610412AA
 P 2975 6025
-F 0 "#PWR?" H 2975 5775 50  0001 C CNN
+F 0 "#PWR0102" H 2975 5775 50  0001 C CNN
 F 1 "GND" H 2980 5852 50  0000 C CNN
 F 2 "" H 2975 6025 50  0001 C CNN
 F 3 "" H 2975 6025 50  0001 C CNN
 	1    2975 6025
 	0    -1   -1   0   
 $EndComp
+Wire Wire Line
+	9000 3825 9000 4175
+$Comp
+L Device:C C9
+U 1 1 60C5A1DE
+P 4175 1450
+F 0 "C9" H 4300 1500 50  0000 L CNN
+F 1 "0.1uF" H 4300 1425 50  0000 L CNN
+F 2 "Capacitor_THT:C_Rect_L7.2mm_W3.5mm_P5.00mm_FKS2_FKP2_MKS2_MKP2" H 4213 1300 50  0001 C CNN
+F 3 "~" H 4175 1450 50  0001 C CNN
+	1    4175 1450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C5
+U 1 1 60C5B39D
+P 3325 1450
+F 0 "C5" H 3125 1500 50  0000 L CNN
+F 1 "0.33uF" H 2950 1425 50  0000 L CNN
+F 2 "Capacitor_THT:C_Rect_L7.2mm_W3.5mm_P5.00mm_FKS2_FKP2_MKS2_MKP2" H 3363 1300 50  0001 C CNN
+F 3 "~" H 3325 1450 50  0001 C CNN
+	1    3325 1450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3150 1300 3325 1300
+Wire Wire Line
+	3325 1300 3450 1300
+Connection ~ 3325 1300
+Wire Wire Line
+	3750 1600 3750 1650
+Wire Wire Line
+	3325 1600 3325 1650
+Wire Wire Line
+	3325 1650 3750 1650
+Connection ~ 3750 1650
+Wire Wire Line
+	3750 1650 3750 1725
+Wire Wire Line
+	3750 1650 4175 1650
+Wire Wire Line
+	4175 1650 4175 1600
+Wire Wire Line
+	4050 1300 4175 1300
+Wire Wire Line
+	4175 1300 4350 1300
+Connection ~ 4175 1300
+Text Notes 3175 1050 0    50   ~ 0
+L7805 datasheet recommends \na 0.33μF mylar (PET) capacitor\non the input and 0.1μF on the\noutput
+Wire Notes Line
+	3175 700  4300 700 
 $EndSCHEMATC
